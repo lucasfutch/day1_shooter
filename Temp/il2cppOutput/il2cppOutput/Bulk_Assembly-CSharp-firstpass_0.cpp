@@ -97,6 +97,8 @@
 #include "UnityEngine_UnityEngine_RaycastHit87180320.h"
 #include "UnityEngine_UnityEngine_AudioSource1135106623.h"
 #include "UnityEngine_UnityEngine_Collider3497673348.h"
+#include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_Un121388197.h"
+#include "UnityEngine_UnityEngine_AI_NavMeshAgent2761625415.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_U4129824344.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_U1698990409.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_U3123075684.h"
@@ -206,6 +208,10 @@ struct UnityARHitTestExample1_t121388200;
 struct Collider_t3497673348;
 // UnityEngine.AudioSource
 struct AudioSource_t1135106623;
+// UnityEngine.XR.iOS.UnityARHitTestExample2
+struct UnityARHitTestExample2_t121388197;
+// UnityEngine.AI.NavMeshAgent
+struct NavMeshAgent_t2761625415;
 // UnityEngine.XR.iOS.UnityARKitControl
 struct UnityARKitControl_t1698990409;
 // UnityEngine.XR.iOS.UnityARMatrixOps
@@ -336,6 +342,12 @@ extern Il2CppCodeGenString* _stringLiteral2799618682;
 extern const uint32_t UnityARHitTestExample1_Update_m3503350450_MetadataUsageId;
 extern Il2CppCodeGenString* _stringLiteral1809839953;
 extern const uint32_t UnityARHitTestExample1_PlayMusicFunc_m2181365943_MetadataUsageId;
+extern const uint32_t UnityARHitTestExample2_HitTestWithResultType_m2984706784_MetadataUsageId;
+extern const MethodInfo* Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219_MethodInfo_var;
+extern const uint32_t UnityARHitTestExample2_Start_m1874789996_MetadataUsageId;
+extern Il2CppCodeGenString* _stringLiteral1776456860;
+extern Il2CppCodeGenString* _stringLiteral1914898942;
+extern const uint32_t UnityARHitTestExample2_Update_m3461779921_MetadataUsageId;
 extern Il2CppClass* UnityARSessionRunOptionU5BU5D_t3114965901_il2cpp_TypeInfo_var;
 extern Il2CppClass* UnityARAlignmentU5BU5D_t218994990_il2cpp_TypeInfo_var;
 extern Il2CppClass* UnityARPlaneDetectionU5BU5D_t191549612_il2cpp_TypeInfo_var;
@@ -1007,6 +1019,14 @@ extern "C"  void AudioSource_Play_m353744792 (AudioSource_t1135106623 * __this, 
 extern "C"  Vector3_t2243707580  Vector3_op_Subtraction_m2407545601 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AudioSource::Stop()
 extern "C"  void AudioSource_Stop_m3452679614 (AudioSource_t1135106623 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.AI.NavMeshAgent>()
+#define Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219(__this, method) ((  NavMeshAgent_t2761625415 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+// UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
+extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination(UnityEngine.Vector3)
+extern "C"  bool NavMeshAgent_SetDestination_m1354616139 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.XR.iOS.UnityARHitTestExample2::HitTestWithResultType(UnityEngine.XR.iOS.ARPoint,UnityEngine.XR.iOS.ARHitTestResultType)
+extern "C"  bool UnityARHitTestExample2_HitTestWithResultType_m2984706784 (UnityARHitTestExample2_t121388197 * __this, ARPoint_t3436811567  ___point0, int64_t ___resultTypes1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Rect::.ctor(System.Single,System.Single,System.Single,System.Single)
 extern "C"  void Rect__ctor_m1220545469 (Rect_t3681755626 * __this, float p0, float p1, float p2, float p3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.GUI::Button(UnityEngine.Rect,System.String)
@@ -3362,6 +3382,354 @@ extern "C"  void UnityARHitTestExample1_StopPlayMusicFunc_m3114090679 (UnityARHi
 		AudioSource_t1135106623 * L_5 = ___audio0;
 		NullCheck(L_5);
 		AudioSource_Stop_m3452679614(L_5, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UnityARHitTestExample2::.ctor()
+extern "C"  void UnityARHitTestExample2__ctor_m2071935780 (UnityARHitTestExample2_t121388197 * __this, const MethodInfo* method)
+{
+	{
+		__this->set_firstTime_3((bool)1);
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean UnityEngine.XR.iOS.UnityARHitTestExample2::HitTestWithResultType(UnityEngine.XR.iOS.ARPoint,UnityEngine.XR.iOS.ARHitTestResultType)
+extern "C"  bool UnityARHitTestExample2_HitTestWithResultType_m2984706784 (UnityARHitTestExample2_t121388197 * __this, ARPoint_t3436811567  ___point0, int64_t ___resultTypes1, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityARHitTestExample2_HitTestWithResultType_m2984706784_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	List_1_t2644634157 * V_0 = NULL;
+	ARHitTestResult_t3275513025  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	Enumerator_t2179363831  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	Vector3_t2243707580  V_3;
+	memset(&V_3, 0, sizeof(V_3));
+	Vector3_t2243707580  V_4;
+	memset(&V_4, 0, sizeof(V_4));
+	Vector3_t2243707580  V_5;
+	memset(&V_5, 0, sizeof(V_5));
+	bool V_6 = false;
+	Exception_t1927440687 * __last_unhandled_exception = 0;
+	NO_UNUSED_WARNING (__last_unhandled_exception);
+	Exception_t1927440687 * __exception_local = 0;
+	NO_UNUSED_WARNING (__exception_local);
+	int32_t __leave_target = 0;
+	NO_UNUSED_WARNING (__leave_target);
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(UnityARSessionNativeInterface_t1130867170_il2cpp_TypeInfo_var);
+		UnityARSessionNativeInterface_t1130867170 * L_0 = UnityARSessionNativeInterface_GetARSessionNativeInterface_m3174488657(NULL /*static, unused*/, /*hidden argument*/NULL);
+		ARPoint_t3436811567  L_1 = ___point0;
+		int64_t L_2 = ___resultTypes1;
+		NullCheck(L_0);
+		List_1_t2644634157 * L_3 = UnityARSessionNativeInterface_HitTest_m388588674(L_0, L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		List_1_t2644634157 * L_4 = V_0;
+		NullCheck(L_4);
+		int32_t L_5 = List_1_get_Count_m1598304542(L_4, /*hidden argument*/List_1_get_Count_m1598304542_MethodInfo_var);
+		if ((((int32_t)L_5) <= ((int32_t)0)))
+		{
+			goto IL_00e5;
+		}
+	}
+	{
+		List_1_t2644634157 * L_6 = V_0;
+		NullCheck(L_6);
+		Enumerator_t2179363831  L_7 = List_1_GetEnumerator_m2885046859(L_6, /*hidden argument*/List_1_GetEnumerator_m2885046859_MethodInfo_var);
+		V_2 = L_7;
+	}
+
+IL_0020:
+	try
+	{ // begin try (depth: 1)
+		{
+			goto IL_00c6;
+		}
+
+IL_0025:
+		{
+			ARHitTestResult_t3275513025  L_8 = Enumerator_get_Current_m2775711191((&V_2), /*hidden argument*/Enumerator_get_Current_m2775711191_MethodInfo_var);
+			V_1 = L_8;
+			IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+			Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1415053652, /*hidden argument*/NULL);
+			Transform_t3275118058 * L_9 = __this->get_m_HitTransform_2();
+			Matrix4x4_t2933234003  L_10 = (&V_1)->get_worldTransform_3();
+			Vector3_t2243707580  L_11 = UnityARMatrixOps_GetPosition_m1153858439(NULL /*static, unused*/, L_10, /*hidden argument*/NULL);
+			NullCheck(L_9);
+			Transform_set_position_m2469242620(L_9, L_11, /*hidden argument*/NULL);
+			Transform_t3275118058 * L_12 = __this->get_m_HitTransform_2();
+			Matrix4x4_t2933234003  L_13 = (&V_1)->get_worldTransform_3();
+			Quaternion_t4030073918  L_14 = UnityARMatrixOps_GetRotation_m1002641986(NULL /*static, unused*/, L_13, /*hidden argument*/NULL);
+			NullCheck(L_12);
+			Transform_set_rotation_m3411284563(L_12, L_14, /*hidden argument*/NULL);
+			Transform_t3275118058 * L_15 = __this->get_m_HitTransform_2();
+			NullCheck(L_15);
+			Vector3_t2243707580  L_16 = Transform_get_position_m1104419803(L_15, /*hidden argument*/NULL);
+			V_3 = L_16;
+			float L_17 = (&V_3)->get_x_1();
+			float L_18 = L_17;
+			Il2CppObject * L_19 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_18);
+			Transform_t3275118058 * L_20 = __this->get_m_HitTransform_2();
+			NullCheck(L_20);
+			Vector3_t2243707580  L_21 = Transform_get_position_m1104419803(L_20, /*hidden argument*/NULL);
+			V_4 = L_21;
+			float L_22 = (&V_4)->get_y_2();
+			float L_23 = L_22;
+			Il2CppObject * L_24 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_23);
+			Transform_t3275118058 * L_25 = __this->get_m_HitTransform_2();
+			NullCheck(L_25);
+			Vector3_t2243707580  L_26 = Transform_get_position_m1104419803(L_25, /*hidden argument*/NULL);
+			V_5 = L_26;
+			float L_27 = (&V_5)->get_z_3();
+			float L_28 = L_27;
+			Il2CppObject * L_29 = Box(Single_t2076509932_il2cpp_TypeInfo_var, &L_28);
+			IL2CPP_RUNTIME_CLASS_INIT(String_t_il2cpp_TypeInfo_var);
+			String_t* L_30 = String_Format_m4262916296(NULL /*static, unused*/, _stringLiteral1537444060, L_19, L_24, L_29, /*hidden argument*/NULL);
+			Debug_Log_m920475918(NULL /*static, unused*/, L_30, /*hidden argument*/NULL);
+			V_6 = (bool)1;
+			IL2CPP_LEAVE(0xE7, FINALLY_00d7);
+		}
+
+IL_00c6:
+		{
+			bool L_31 = Enumerator_MoveNext_m3661301011((&V_2), /*hidden argument*/Enumerator_MoveNext_m3661301011_MethodInfo_var);
+			if (L_31)
+			{
+				goto IL_0025;
+			}
+		}
+
+IL_00d2:
+		{
+			IL2CPP_LEAVE(0xE5, FINALLY_00d7);
+		}
+	} // end try (depth: 1)
+	catch(Il2CppExceptionWrapper& e)
+	{
+		__last_unhandled_exception = (Exception_t1927440687 *)e.ex;
+		goto FINALLY_00d7;
+	}
+
+FINALLY_00d7:
+	{ // begin finally (depth: 1)
+		Enumerator_Dispose_m3109677227((&V_2), /*hidden argument*/Enumerator_Dispose_m3109677227_MethodInfo_var);
+		IL2CPP_END_FINALLY(215)
+	} // end finally (depth: 1)
+	IL2CPP_CLEANUP(215)
+	{
+		IL2CPP_JUMP_TBL(0xE7, IL_00e7)
+		IL2CPP_JUMP_TBL(0xE5, IL_00e5)
+		IL2CPP_RETHROW_IF_UNHANDLED(Exception_t1927440687 *)
+	}
+
+IL_00e5:
+	{
+		return (bool)0;
+	}
+
+IL_00e7:
+	{
+		bool L_32 = V_6;
+		return L_32;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UnityARHitTestExample2::Start()
+extern "C"  void UnityARHitTestExample2_Start_m1874789996 (UnityARHitTestExample2_t121388197 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityARHitTestExample2_Start_m1874789996_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NavMeshAgent_t2761625415 * L_0 = Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219(__this, /*hidden argument*/Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219_MethodInfo_var);
+		__this->set_agent_4(L_0);
+		return;
+	}
+}
+// System.Void UnityEngine.XR.iOS.UnityARHitTestExample2::Update()
+extern "C"  void UnityARHitTestExample2_Update_m3461779921 (UnityARHitTestExample2_t121388197 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (UnityARHitTestExample2_Update_m3461779921_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	RaycastHit_t87180320  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	Touch_t407273883  V_1;
+	memset(&V_1, 0, sizeof(V_1));
+	Touch_t407273883  V_2;
+	memset(&V_2, 0, sizeof(V_2));
+	Ray_t2469606224  V_3;
+	memset(&V_3, 0, sizeof(V_3));
+	Touch_t407273883  V_4;
+	memset(&V_4, 0, sizeof(V_4));
+	Vector3_t2243707580  V_5;
+	memset(&V_5, 0, sizeof(V_5));
+	ARPoint_t3436811567  V_6;
+	memset(&V_6, 0, sizeof(V_6));
+	ARPoint_t3436811567  V_7;
+	memset(&V_7, 0, sizeof(V_7));
+	ARHitTestResultTypeU5BU5D_t1303085420* V_8 = NULL;
+	int64_t V_9 = 0;
+	ARHitTestResultTypeU5BU5D_t1303085420* V_10 = NULL;
+	int32_t V_11 = 0;
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		int32_t L_0 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_0) <= ((int32_t)0)))
+		{
+			goto IL_014f;
+		}
+	}
+	{
+		Transform_t3275118058 * L_1 = __this->get_m_HitTransform_2();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t1021602117_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Inequality_m2402264703(NULL /*static, unused*/, L_1, (Object_t1021602117 *)NULL, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_014f;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Touch_t407273883  L_3 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_1 = L_3;
+		int32_t L_4 = Input_get_touchCount_m2050827666(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if ((((int32_t)L_4) <= ((int32_t)0)))
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Touch_t407273883  L_5 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_2 = L_5;
+		int32_t L_6 = Touch_get_phase_m196706494((&V_2), /*hidden argument*/NULL);
+		if (L_6)
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		Camera_t189460977 * L_7 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Touch_t407273883  L_8 = Input_GetTouch_m1463942798(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		V_4 = L_8;
+		Vector2_t2243707579  L_9 = Touch_get_position_m2079703643((&V_4), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_10 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_9, /*hidden argument*/NULL);
+		NullCheck(L_7);
+		Ray_t2469606224  L_11 = Camera_ScreenPointToRay_m614889538(L_7, L_10, /*hidden argument*/NULL);
+		V_3 = L_11;
+		Ray_t2469606224  L_12 = V_3;
+		bool L_13 = Physics_Raycast_m2736931691(NULL /*static, unused*/, L_12, (&V_0), /*hidden argument*/NULL);
+		if (!L_13)
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral2736962493, /*hidden argument*/NULL);
+		Collider_t3497673348 * L_14 = RaycastHit_get_collider_m301198172((&V_0), /*hidden argument*/NULL);
+		NullCheck(L_14);
+		bool L_15 = Component_CompareTag_m3443292365(L_14, _stringLiteral1776456860, /*hidden argument*/NULL);
+		if (!L_15)
+		{
+			goto IL_00aa;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_Log_m920475918(NULL /*static, unused*/, _stringLiteral1914898942, /*hidden argument*/NULL);
+		NavMeshAgent_t2761625415 * L_16 = __this->get_agent_4();
+		Vector3_t2243707580  L_17 = RaycastHit_get_point_m326143462((&V_0), /*hidden argument*/NULL);
+		NullCheck(L_16);
+		NavMeshAgent_SetDestination_m1354616139(L_16, L_17, /*hidden argument*/NULL);
+	}
+
+IL_00aa:
+	{
+		int32_t L_18 = Touch_get_phase_m196706494((&V_1), /*hidden argument*/NULL);
+		if (L_18)
+		{
+			goto IL_014f;
+		}
+	}
+	{
+		Transform_t3275118058 * L_19 = Component_get_transform_m2697483695(__this, /*hidden argument*/NULL);
+		Vector3_t2243707580  L_20 = Vector3_get_zero_m1527993324(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_19);
+		Transform_set_localPosition_m1026930133(L_19, L_20, /*hidden argument*/NULL);
+		Camera_t189460977 * L_21 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Vector2_t2243707579  L_22 = Touch_get_position_m2079703643((&V_1), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_23 = Vector2_op_Implicit_m176791411(NULL /*static, unused*/, L_22, /*hidden argument*/NULL);
+		NullCheck(L_21);
+		Vector3_t2243707580  L_24 = Camera_ScreenToViewportPoint_m2666228286(L_21, L_23, /*hidden argument*/NULL);
+		V_5 = L_24;
+		Initobj (ARPoint_t3436811567_il2cpp_TypeInfo_var, (&V_7));
+		float L_25 = (&V_5)->get_x_1();
+		(&V_7)->set_x_0((((double)((double)L_25))));
+		float L_26 = (&V_5)->get_y_2();
+		(&V_7)->set_y_1((((double)((double)L_26))));
+		ARPoint_t3436811567  L_27 = V_7;
+		V_6 = L_27;
+		ARHitTestResultTypeU5BU5D_t1303085420* L_28 = ((ARHitTestResultTypeU5BU5D_t1303085420*)SZArrayNew(ARHitTestResultTypeU5BU5D_t1303085420_il2cpp_TypeInfo_var, (uint32_t)3));
+		RuntimeHelpers_InitializeArray_m3920580167(NULL /*static, unused*/, (Il2CppArray *)(Il2CppArray *)L_28, LoadFieldToken(U3CPrivateImplementationDetailsU3E_t1486305142____U24fieldU2D8E7629AD5AF686202B8CB7C014505C432FFE31E6_0_FieldInfo_var), /*hidden argument*/NULL);
+		V_8 = L_28;
+		ARHitTestResultTypeU5BU5D_t1303085420* L_29 = V_8;
+		V_10 = L_29;
+		V_11 = 0;
+		goto IL_0144;
+	}
+
+IL_0127:
+	{
+		ARHitTestResultTypeU5BU5D_t1303085420* L_30 = V_10;
+		int32_t L_31 = V_11;
+		NullCheck(L_30);
+		int32_t L_32 = L_31;
+		int64_t L_33 = (L_30)->GetAt(static_cast<il2cpp_array_size_t>(L_32));
+		V_9 = L_33;
+		ARPoint_t3436811567  L_34 = V_6;
+		int64_t L_35 = V_9;
+		bool L_36 = UnityARHitTestExample2_HitTestWithResultType_m2984706784(__this, L_34, L_35, /*hidden argument*/NULL);
+		if (!L_36)
+		{
+			goto IL_013e;
+		}
+	}
+	{
+		return;
+	}
+
+IL_013e:
+	{
+		int32_t L_37 = V_11;
+		V_11 = ((int32_t)((int32_t)L_37+(int32_t)1));
+	}
+
+IL_0144:
+	{
+		int32_t L_38 = V_11;
+		ARHitTestResultTypeU5BU5D_t1303085420* L_39 = V_10;
+		NullCheck(L_39);
+		if ((((int32_t)L_38) < ((int32_t)(((int32_t)((int32_t)(((Il2CppArray *)L_39)->max_length)))))))
+		{
+			goto IL_0127;
+		}
+	}
+
+IL_014f:
+	{
 		return;
 	}
 }

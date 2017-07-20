@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AgentScript.cs" />
+     <Compile Include="Assets\AI Stuff\AgentScript.cs" />
      <Compile Include="Assets\HSVPicker\Enums\ColorValues.cs" />
      <Compile Include="Assets\HSVPicker\Events\ColorChangedEvent.cs" />
      <Compile Include="Assets\HSVPicker\Events\HSVChangedEvent.cs" />
@@ -66,10 +66,10 @@
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\destructor.cs" />
      <Compile Include="Assets\Scripts\disappearOnFall.cs" />
+     <Compile Include="Assets\Scripts\musicControl.cs" />
+     <Compile Include="Assets\Scripts\playMusic.cs" />
+     <Compile Include="Assets\Scripts\selectBox.cs" />
      <Compile Include="Assets\UnityARAmbient.cs" />
-     <Compile Include="Assets\musicControl.cs" />
-     <Compile Include="Assets\playMusic.cs" />
-     <Compile Include="Assets\selectBox.cs" />
      <None Include="Assets\Textures\DepthMask.shader" />
      <None Include="Assets\Plugins\iOS\UnityARKit\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\SpartanKing\animations.txt" />

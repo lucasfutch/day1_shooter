@@ -8,11 +8,13 @@
 <type fullname="UnityEngine.XR.iOS.UnityARGeneratePlane" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARHitTestExample" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARHitTestExample1" preserve="all"/>
+<type fullname="UnityEngine.XR.iOS.UnityARHitTestExample2" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARKitControl" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARVideo" preserve="all"/>
 <type fullname="UnityPointCloudExample" preserve="all"/>
 </assembly>
 <assembly fullname="Assembly-CSharp">
+<type fullname="AgentScript" preserve="all"/>
 <type fullname="ColorPickerTester" preserve="all"/>
 <type fullname="TiltWindow" preserve="all"/>
 <type fullname="ColorImage" preserve="all"/>
@@ -28,10 +30,10 @@
 <type fullname="Shooting" preserve="all"/>
 <type fullname="destructor" preserve="all"/>
 <type fullname="disappearOnFall" preserve="all"/>
-<type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
 <type fullname="musicControl" preserve="all"/>
 <type fullname="playMusic" preserve="all"/>
 <type fullname="selectBox" preserve="all"/>
+<type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>

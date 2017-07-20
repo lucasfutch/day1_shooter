@@ -142,6 +142,8 @@ extern "C" void UriScheme_t1876590943_marshal_pinvoke(void* managedStructure, vo
 extern "C" void UriScheme_t1876590943_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void UriScheme_t1876590943_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const Il2CppType UriScheme_t1876590943_0_0_0;
+extern "C" void DelegatePInvokeWrapper_OnNavMeshPreUpdate_t2039022291();
+extern const Il2CppType OnNavMeshPreUpdate_t2039022291_0_0_0;
 extern "C" void AnimationCurve_t3306541151_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
 extern "C" void AnimationCurve_t3306541151_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void AnimationCurve_t3306541151_marshal_pinvoke_cleanup(void* marshaledStructure);
@@ -374,7 +376,7 @@ extern "C" void DelegatePInvokeWrapper_internal_ARAnchorUpdated_t3705772742();
 extern const Il2CppType internal_ARAnchorUpdated_t3705772742_0_0_0;
 extern "C" void DelegatePInvokeWrapper_internal_ARFrameUpdate_t3296518558();
 extern const Il2CppType internal_ARFrameUpdate_t3296518558_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[106] = 
+extern Il2CppInteropData g_Il2CppInteropData[107] = 
 {
 	{ NULL, Context_t2636657155_marshal_pinvoke, Context_t2636657155_marshal_pinvoke_back, Context_t2636657155_marshal_pinvoke_cleanup, NULL, NULL, &Context_t2636657155_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t169451053_marshal_pinvoke, Escape_t169451053_marshal_pinvoke_back, Escape_t169451053_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t169451053_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -412,6 +414,7 @@ extern Il2CppInteropData g_Il2CppInteropData[106] =
 	{ NULL, Interval_t2354235237_marshal_pinvoke, Interval_t2354235237_marshal_pinvoke_back, Interval_t2354235237_marshal_pinvoke_cleanup, NULL, NULL, &Interval_t2354235237_0_0_0 } /* System.Text.RegularExpressions.Interval */,
 	{ DelegatePInvokeWrapper_CostDelegate_t1824458113, NULL, NULL, NULL, NULL, NULL, &CostDelegate_t1824458113_0_0_0 } /* System.Text.RegularExpressions.IntervalCollection/CostDelegate */,
 	{ NULL, UriScheme_t1876590943_marshal_pinvoke, UriScheme_t1876590943_marshal_pinvoke_back, UriScheme_t1876590943_marshal_pinvoke_cleanup, NULL, NULL, &UriScheme_t1876590943_0_0_0 } /* System.Uri/UriScheme */,
+	{ DelegatePInvokeWrapper_OnNavMeshPreUpdate_t2039022291, NULL, NULL, NULL, NULL, NULL, &OnNavMeshPreUpdate_t2039022291_0_0_0 } /* UnityEngine.AI.NavMesh/OnNavMeshPreUpdate */,
 	{ NULL, AnimationCurve_t3306541151_marshal_pinvoke, AnimationCurve_t3306541151_marshal_pinvoke_back, AnimationCurve_t3306541151_marshal_pinvoke_cleanup, NULL, NULL, &AnimationCurve_t3306541151_0_0_0 } /* UnityEngine.AnimationCurve */,
 	{ NULL, AnimationEvent_t2428323300_marshal_pinvoke, AnimationEvent_t2428323300_marshal_pinvoke_back, AnimationEvent_t2428323300_marshal_pinvoke_cleanup, NULL, NULL, &AnimationEvent_t2428323300_0_0_0 } /* UnityEngine.AnimationEvent */,
 	{ NULL, AnimatorTransitionInfo_t2410896200_marshal_pinvoke, AnimatorTransitionInfo_t2410896200_marshal_pinvoke_back, AnimatorTransitionInfo_t2410896200_marshal_pinvoke_cleanup, NULL, NULL, &AnimatorTransitionInfo_t2410896200_0_0_0 } /* UnityEngine.AnimatorTransitionInfo */,

@@ -7408,6 +7408,14 @@ extern "C" void AesTransform_Decrypt128_m3067379519 ();
 extern "C" void MonoPInvokeCallbackAttribute__ctor_m1298113763 ();
 extern "C" void AddComponentMenu__ctor_m2231330368 ();
 extern "C" void AddComponentMenu__ctor_m648737891 ();
+extern "C" void NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974 ();
+extern "C" void OnNavMeshPreUpdate__ctor_m1184347935 ();
+extern "C" void OnNavMeshPreUpdate_Invoke_m1433154603 ();
+extern "C" void OnNavMeshPreUpdate_BeginInvoke_m3346880328 ();
+extern "C" void OnNavMeshPreUpdate_EndInvoke_m3901151097 ();
+extern "C" void NavMeshAgent_SetDestination_m1354616139 ();
+extern "C" void NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988 ();
+extern "C" void NavMeshAgent_get_remainingDistance_m2699477664 ();
 extern "C" void AnimationCurve__ctor_m2814448007 ();
 extern "C" void AnimationCurve__ctor_m3707994114 ();
 extern "C" void AnimationCurve_Cleanup_m2190142678 ();
@@ -8937,6 +8945,8 @@ extern "C" void ScriptableObject_Internal_CreateScriptableObject_m1778903390 ();
 extern "C" void ScriptableObject_CreateInstance_m3921674852 ();
 extern "C" void ScriptableObject_CreateInstance_m3271154163 ();
 extern "C" void ScriptableObject_CreateInstanceFromType_m4271875689 ();
+extern "C" void MovedFromAttribute__ctor_m4050085439 ();
+extern "C" void MovedFromAttribute_set_Namespace_m1786632593 ();
 extern "C" void GeneratedByOldBindingsGeneratorAttribute__ctor_m3745565094 ();
 extern "C" void RequiredByNativeCodeAttribute__ctor_m2374853658 ();
 extern "C" void RequiredByNativeCodeAttribute__ctor_m3769832076 ();
@@ -10877,6 +10887,10 @@ extern "C" void UnityARHitTestExample1_HitTestWithResultType_m3369834981 ();
 extern "C" void UnityARHitTestExample1_Update_m3503350450 ();
 extern "C" void UnityARHitTestExample1_PlayMusicFunc_m2181365943 ();
 extern "C" void UnityARHitTestExample1_StopPlayMusicFunc_m3114090679 ();
+extern "C" void UnityARHitTestExample2__ctor_m2071935780 ();
+extern "C" void UnityARHitTestExample2_HitTestWithResultType_m2984706784 ();
+extern "C" void UnityARHitTestExample2_Start_m1874789996 ();
+extern "C" void UnityARHitTestExample2_Update_m3461779921 ();
 extern "C" void UnityARKitControl__ctor_m1699713484 ();
 extern "C" void UnityARKitControl_Start_m620031836 ();
 extern "C" void UnityARKitControl_Update_m2500411141 ();
@@ -10984,6 +10998,9 @@ extern "C" void UnityPointCloudExample__ctor_m4118737579 ();
 extern "C" void UnityPointCloudExample_Start_m3369543775 ();
 extern "C" void UnityPointCloudExample_ARFrameUpdated_m3631038593 ();
 extern "C" void UnityPointCloudExample_Update_m1416789468 ();
+extern "C" void AgentScript__ctor_m2829665649 ();
+extern "C" void AgentScript_Start_m3621949025 ();
+extern "C" void AgentScript_Update_m198097924 ();
 extern "C" void ColorChangedEvent__ctor_m3710136698 ();
 extern "C" void ColorImage__ctor_m797732221 ();
 extern "C" void ColorImage_Awake_m1432153760 ();
@@ -11148,7 +11165,7 @@ extern "C" void BoxSliderEvent__ctor_m304261805 ();
 extern "C" void UnityARAmbient__ctor_m3700524047 ();
 extern "C" void UnityARAmbient_Start_m303369171 ();
 extern "C" void UnityARAmbient_Update_m2066148092 ();
-extern const Il2CppMethodPointer g_MethodPointers[11134] = 
+extern const Il2CppMethodPointer g_MethodPointers[11151] = 
 {
 	Locale_GetText_m1954433032,
 	Locale_GetText_m2553164138,
@@ -18544,6 +18561,14 @@ extern const Il2CppMethodPointer g_MethodPointers[11134] =
 	MonoPInvokeCallbackAttribute__ctor_m1298113763,
 	AddComponentMenu__ctor_m2231330368,
 	AddComponentMenu__ctor_m648737891,
+	NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974,
+	OnNavMeshPreUpdate__ctor_m1184347935,
+	OnNavMeshPreUpdate_Invoke_m1433154603,
+	OnNavMeshPreUpdate_BeginInvoke_m3346880328,
+	OnNavMeshPreUpdate_EndInvoke_m3901151097,
+	NavMeshAgent_SetDestination_m1354616139,
+	NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988,
+	NavMeshAgent_get_remainingDistance_m2699477664,
 	AnimationCurve__ctor_m2814448007,
 	AnimationCurve__ctor_m3707994114,
 	AnimationCurve_Cleanup_m2190142678,
@@ -20073,6 +20098,8 @@ extern const Il2CppMethodPointer g_MethodPointers[11134] =
 	ScriptableObject_CreateInstance_m3921674852,
 	ScriptableObject_CreateInstance_m3271154163,
 	ScriptableObject_CreateInstanceFromType_m4271875689,
+	MovedFromAttribute__ctor_m4050085439,
+	MovedFromAttribute_set_Namespace_m1786632593,
 	GeneratedByOldBindingsGeneratorAttribute__ctor_m3745565094,
 	RequiredByNativeCodeAttribute__ctor_m2374853658,
 	RequiredByNativeCodeAttribute__ctor_m3769832076,
@@ -22013,6 +22040,10 @@ extern const Il2CppMethodPointer g_MethodPointers[11134] =
 	UnityARHitTestExample1_Update_m3503350450,
 	UnityARHitTestExample1_PlayMusicFunc_m2181365943,
 	UnityARHitTestExample1_StopPlayMusicFunc_m3114090679,
+	UnityARHitTestExample2__ctor_m2071935780,
+	UnityARHitTestExample2_HitTestWithResultType_m2984706784,
+	UnityARHitTestExample2_Start_m1874789996,
+	UnityARHitTestExample2_Update_m3461779921,
 	UnityARKitControl__ctor_m1699713484,
 	UnityARKitControl_Start_m620031836,
 	UnityARKitControl_Update_m2500411141,
@@ -22120,6 +22151,9 @@ extern const Il2CppMethodPointer g_MethodPointers[11134] =
 	UnityPointCloudExample_Start_m3369543775,
 	UnityPointCloudExample_ARFrameUpdated_m3631038593,
 	UnityPointCloudExample_Update_m1416789468,
+	AgentScript__ctor_m2829665649,
+	AgentScript_Start_m3621949025,
+	AgentScript_Update_m198097924,
 	ColorChangedEvent__ctor_m3710136698,
 	ColorImage__ctor_m797732221,
 	ColorImage_Awake_m1432153760,

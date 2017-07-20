@@ -6,5 +6,5 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/musicBoxes.unity
-    guid: b4ada4ff373f644d6b7f21095b9e3a70
+    path: Assets/_Scenes/AIZombie.unity
+    guid: b3a8bbf05392f4231adecf4675898b51

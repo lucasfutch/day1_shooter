@@ -16,6 +16,11 @@
 #include "class-internals.h"
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
+#include "UnityEngine_UnityEngine_Renderer257310565.h"
+#include "UnityEngine_UnityEngine_Material193706927.h"
+#include "mscorlib_System_Int322071877448.h"
+#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
+#include "UnityEngine_UnityEngine_Rendering_CameraEvent2007842675.h"
 #include "UnityEngine_UnityEngine_Rendering_ColorWriteMask926634530.h"
 #include "UnityEngine_UnityEngine_Rendering_CommandBuffer1204166949.h"
 #include "mscorlib_System_Void1841601450.h"
@@ -24,10 +29,7 @@
 #include "mscorlib_System_Boolean3825574718.h"
 #include "UnityEngine_UnityEngine_Texture2243626319.h"
 #include "UnityEngine_UnityEngine_Rendering_RenderTargetIdent772440638.h"
-#include "UnityEngine_UnityEngine_Material193706927.h"
-#include "mscorlib_System_Int322071877448.h"
 #include "UnityEngine_UnityEngine_Rendering_CompareFunction457874581.h"
-#include "UnityEngine_UnityEngine_Rendering_BuiltinRenderText195473098.h"
 #include "mscorlib_System_String2029220233.h"
 #include "UnityEngine_UnityEngine_Rendering_StencilOp2936374925.h"
 #include "UnityEngine_UnityEngine_RenderMode4280533217.h"
@@ -56,6 +58,7 @@
 #include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngine_ScreenOrientation4019489636.h"
 #include "UnityEngine_UnityEngine_ScriptableObject1975622470.h"
+#include "UnityEngine_UnityEngine_Scripting_APIUpdating_Moved922195725.h"
 #include "UnityEngine_UnityEngine_Scripting_GeneratedByOldBin107439586.h"
 #include "UnityEngine_UnityEngine_Scripting_RequiredByNative1913052472.h"
 #include "UnityEngine_UnityEngine_Scripting_UsedByNativeCode3212052468.h"
@@ -189,21 +192,17 @@
 #include "mscorlib_System_Runtime_Serialization_StreamingCon1417235061.h"
 #include "UnityEngine_UnityEngine_UnityString276356480.h"
 #include "mscorlib_System_IndexOutOfRangeException3527622107.h"
-#include "UnityEngine_UnityEngine_WaitForEndOfFrame1785723201.h"
-#include "UnityEngine_UnityEngine_YieldInstruction3462875981.h"
-#include "UnityEngine_UnityEngine_WaitForFixedUpdate3968615785.h"
-#include "UnityEngine_UnityEngine_WaitForSeconds3839502067.h"
-#include "UnityEngine_UnityEngine_WaitForSecondsRealtime2105307154.h"
-#include "UnityEngine_UnityEngine_CustomYieldInstruction1786092740.h"
 
+// UnityEngine.Renderer
+struct Renderer_t257310565;
+// UnityEngine.Material
+struct Material_t193706927;
 // UnityEngine.Rendering.CommandBuffer
 struct CommandBuffer_t1204166949;
 // System.Object
 struct Il2CppObject;
 // UnityEngine.Texture
 struct Texture_t2243626319;
-// UnityEngine.Material
-struct Material_t193706927;
 // System.String
 struct String_t;
 // System.Object[]
@@ -232,6 +231,8 @@ struct UnityAction_1_t3051495417;
 struct UnityAction_2_t606618774;
 // UnityEngine.ScriptableObject
 struct ScriptableObject_t1975622470;
+// UnityEngine.Scripting.APIUpdating.MovedFromAttribute
+struct MovedFromAttribute_t922195725;
 // UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute
 struct GeneratedByOldBindingsGeneratorAttribute_t107439586;
 // UnityEngine.Scripting.RequiredByNativeCodeAttribute
@@ -410,18 +411,6 @@ struct UnityException_t2687879050;
 struct SerializationInfo_t228987430;
 // System.IndexOutOfRangeException
 struct IndexOutOfRangeException_t3527622107;
-// UnityEngine.WaitForEndOfFrame
-struct WaitForEndOfFrame_t1785723201;
-// UnityEngine.YieldInstruction
-struct YieldInstruction_t3462875981;
-// UnityEngine.WaitForFixedUpdate
-struct WaitForFixedUpdate_t3968615785;
-// UnityEngine.WaitForSeconds
-struct WaitForSeconds_t3839502067;
-// UnityEngine.WaitForSecondsRealtime
-struct WaitForSecondsRealtime_t2105307154;
-// UnityEngine.CustomYieldInstruction
-struct CustomYieldInstruction_t1786092740;
 extern Il2CppClass* IntPtr_t_il2cpp_TypeInfo_var;
 extern const uint32_t CommandBuffer__ctor_m3893953450_MetadataUsageId;
 extern const uint32_t CommandBuffer_Dispose_m952026238_MetadataUsageId;
@@ -1502,6 +1491,8 @@ extern "C"  void Object__ctor_m197157284 (Object_t1021602117 * __this, const Met
 extern "C"  void ScriptableObject_Internal_CreateScriptableObject_m1778903390 (Il2CppObject * __this /* static, unused */, ScriptableObject_t1975622470 * ___self0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.ScriptableObject UnityEngine.ScriptableObject::CreateInstanceFromType(System.Type)
 extern "C"  ScriptableObject_t1975622470 * ScriptableObject_CreateInstanceFromType_m4271875689 (Il2CppObject * __this /* static, unused */, Type_t * ___type0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttribute::set_Namespace(System.String)
+extern "C"  void MovedFromAttribute_set_Namespace_m1786632593 (MovedFromAttribute_t922195725 * __this, String_t* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Scripting.RequiredByNativeCodeAttribute::set_Name(System.String)
 extern "C"  void RequiredByNativeCodeAttribute_set_Name_m3041405080 (RequiredByNativeCodeAttribute_t1913052472 * __this, String_t* ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.Input::get_mousePosition()
@@ -2130,17 +2121,38 @@ extern "C"  Vector4_t2243707581  Vector4_op_Subtraction_m2837269249 (Il2CppObjec
 extern "C"  float Vector4_SqrMagnitude_m3109980116 (Il2CppObject * __this /* static, unused */, Vector4_t2243707581  ___a0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Vector4::ToString()
 extern "C"  String_t* Vector4_ToString_m2340321043 (Vector4_t2243707581 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.YieldInstruction::.ctor()
-extern "C"  void YieldInstruction__ctor_m2014522928 (YieldInstruction_t3462875981 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Void UnityEngine.CustomYieldInstruction::.ctor()
-extern "C"  void CustomYieldInstruction__ctor_m1721050687 (CustomYieldInstruction_t1786092740 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Single UnityEngine.Time::get_realtimeSinceStartup()
-extern "C"  float Time_get_realtimeSinceStartup_m357614587 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// UnityEngine.Material UnityEngine.Renderer::get_material()
+extern "C"  Material_t193706927 * Renderer_get_material_m2553789785 (Renderer_t257310565 * __this, const MethodInfo* method)
+{
+	typedef Material_t193706927 * (*Renderer_get_material_m2553789785_ftn) (Renderer_t257310565 *);
+	static Renderer_get_material_m2553789785_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_get_material_m2553789785_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_material()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Int32 UnityEngine.Renderer::get_sortingLayerID()
+extern "C"  int32_t Renderer_get_sortingLayerID_m2403577271 (Renderer_t257310565 * __this, const MethodInfo* method)
+{
+	typedef int32_t (*Renderer_get_sortingLayerID_m2403577271_ftn) (Renderer_t257310565 *);
+	static Renderer_get_sortingLayerID_m2403577271_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_get_sortingLayerID_m2403577271_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_sortingLayerID()");
+	return _il2cpp_icall_func(__this);
+}
+// System.Int32 UnityEngine.Renderer::get_sortingOrder()
+extern "C"  int32_t Renderer_get_sortingOrder_m1544525007 (Renderer_t257310565 * __this, const MethodInfo* method)
+{
+	typedef int32_t (*Renderer_get_sortingOrder_m1544525007_ftn) (Renderer_t257310565 *);
+	static Renderer_get_sortingOrder_m1544525007_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_get_sortingOrder_m1544525007_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_sortingOrder()");
+	return _il2cpp_icall_func(__this);
+}
 // System.Void UnityEngine.Rendering.CommandBuffer::.ctor()
 extern "C"  void CommandBuffer__ctor_m3893953450 (CommandBuffer_t1204166949 * __this, const MethodInfo* method)
 {
@@ -3020,6 +3032,25 @@ extern "C"  ScriptableObject_t1975622470 * ScriptableObject_CreateInstanceFromTy
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (ScriptableObject_CreateInstanceFromType_m4271875689_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.ScriptableObject::CreateInstanceFromType(System.Type)");
 	return _il2cpp_icall_func(___type0);
+}
+// System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttribute::.ctor(System.String)
+extern "C"  void MovedFromAttribute__ctor_m4050085439 (MovedFromAttribute_t922195725 * __this, String_t* ___sourceNamespace0, const MethodInfo* method)
+{
+	{
+		Attribute__ctor_m1730479323(__this, /*hidden argument*/NULL);
+		String_t* L_0 = ___sourceNamespace0;
+		MovedFromAttribute_set_Namespace_m1786632593(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void UnityEngine.Scripting.APIUpdating.MovedFromAttribute::set_Namespace(System.String)
+extern "C"  void MovedFromAttribute_set_Namespace_m1786632593 (MovedFromAttribute_t922195725 * __this, String_t* ___value0, const MethodInfo* method)
+{
+	{
+		String_t* L_0 = ___value0;
+		__this->set_U3CNamespaceU3Ek__BackingField_0(L_0);
+		return;
+	}
 }
 // System.Void UnityEngine.Scripting.GeneratedByOldBindingsGeneratorAttribute::.ctor()
 extern "C"  void GeneratedByOldBindingsGeneratorAttribute__ctor_m3745565094 (GeneratedByOldBindingsGeneratorAttribute_t107439586 * __this, const MethodInfo* method)
@@ -14903,90 +14934,6 @@ IL_000e:
 	{
 		float L_3 = V_0;
 		return L_3;
-	}
-}
-// System.Void UnityEngine.WaitForEndOfFrame::.ctor()
-extern "C"  void WaitForEndOfFrame__ctor_m3062480170 (WaitForEndOfFrame_t1785723201 * __this, const MethodInfo* method)
-{
-	{
-		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.WaitForFixedUpdate::.ctor()
-extern "C"  void WaitForFixedUpdate__ctor_m3781413380 (WaitForFixedUpdate_t3968615785 * __this, const MethodInfo* method)
-{
-	{
-		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
-{
-	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
-}
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_back(const WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled, WaitForSeconds_t3839502067& unmarshaled)
-{
-	float unmarshaled_m_Seconds_temp_0 = 0.0f;
-	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
-	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_pinvoke_cleanup(WaitForSeconds_t3839502067_marshaled_pinvoke& marshaled)
-{
-}
-// Conversion methods for marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_com(const WaitForSeconds_t3839502067& unmarshaled, WaitForSeconds_t3839502067_marshaled_com& marshaled)
-{
-	marshaled.___m_Seconds_0 = unmarshaled.get_m_Seconds_0();
-}
-extern "C" void WaitForSeconds_t3839502067_marshal_com_back(const WaitForSeconds_t3839502067_marshaled_com& marshaled, WaitForSeconds_t3839502067& unmarshaled)
-{
-	float unmarshaled_m_Seconds_temp_0 = 0.0f;
-	unmarshaled_m_Seconds_temp_0 = marshaled.___m_Seconds_0;
-	unmarshaled.set_m_Seconds_0(unmarshaled_m_Seconds_temp_0);
-}
-// Conversion method for clean up from marshalling of: UnityEngine.WaitForSeconds
-extern "C" void WaitForSeconds_t3839502067_marshal_com_cleanup(WaitForSeconds_t3839502067_marshaled_com& marshaled)
-{
-}
-// System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
-extern "C"  void WaitForSeconds__ctor_m1990515539 (WaitForSeconds_t3839502067 * __this, float ___seconds0, const MethodInfo* method)
-{
-	{
-		YieldInstruction__ctor_m2014522928(__this, /*hidden argument*/NULL);
-		float L_0 = ___seconds0;
-		__this->set_m_Seconds_0(L_0);
-		return;
-	}
-}
-// System.Void UnityEngine.WaitForSecondsRealtime::.ctor(System.Single)
-extern "C"  void WaitForSecondsRealtime__ctor_m1734539010 (WaitForSecondsRealtime_t2105307154 * __this, float ___time0, const MethodInfo* method)
-{
-	{
-		CustomYieldInstruction__ctor_m1721050687(__this, /*hidden argument*/NULL);
-		float L_0 = Time_get_realtimeSinceStartup_m357614587(NULL /*static, unused*/, /*hidden argument*/NULL);
-		float L_1 = ___time0;
-		__this->set_waitTime_0(((float)((float)L_0+(float)L_1)));
-		return;
-	}
-}
-// System.Boolean UnityEngine.WaitForSecondsRealtime::get_keepWaiting()
-extern "C"  bool WaitForSecondsRealtime_get_keepWaiting_m741039114 (WaitForSecondsRealtime_t2105307154 * __this, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		float L_0 = Time_get_realtimeSinceStartup_m357614587(NULL /*static, unused*/, /*hidden argument*/NULL);
-		float L_1 = __this->get_waitTime_0();
-		V_0 = (bool)((((float)L_0) < ((float)L_1))? 1 : 0);
-		goto IL_0014;
-	}
-
-IL_0014:
-	{
-		bool L_2 = V_0;
-		return L_2;
 	}
 }
 #ifdef __clang__

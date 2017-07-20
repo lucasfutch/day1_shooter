@@ -24,19 +24,25 @@
 #include "UnityEngine_UnityEngine_AddComponentMenu1099699699.h"
 #include "mscorlib_System_String2029220233.h"
 #include "mscorlib_System_Int322071877448.h"
+#include "UnityEngine_UnityEngine_AI_NavMesh1481227028.h"
+#include "UnityEngine_UnityEngine_AI_NavMesh_OnNavMeshPreUpd2039022291.h"
+#include "mscorlib_System_Object2689449295.h"
+#include "mscorlib_System_IntPtr2504060609.h"
+#include "mscorlib_System_AsyncCallback163412349.h"
+#include "UnityEngine_UnityEngine_AI_NavMeshAgent2761625415.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "mscorlib_System_Boolean3825574718.h"
+#include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngine_AnimationClip3510324950.h"
 #include "UnityEngine_UnityEngine_AnimationCurve3306541151.h"
 #include "UnityEngine_UnityEngine_Keyframe1449471340.h"
-#include "mscorlib_System_Object2689449295.h"
 #include "UnityEngine_UnityEngine_AnimationEvent2428323300.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
 #include "UnityEngine_UnityEngine_AnimationEventSource3560017945.h"
 #include "UnityEngine_UnityEngine_AnimationState1303741697.h"
 #include "UnityEngine_UnityEngine_AnimatorStateInfo2577870592.h"
 #include "UnityEngine_UnityEngine_AnimatorClipInfo3905751349.h"
-#include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UnityEngine_SendMessageOptions1414041951.h"
-#include "mscorlib_System_Boolean3825574718.h"
 #include "UnityEngine_UnityEngine_Animator69676727.h"
 #include "UnityEngine_UnityEngine_AnimatorControllerParamete1381019216.h"
 #include "UnityEngine_UnityEngine_AnimatorControllerParamete3688495056.h"
@@ -46,8 +52,6 @@
 #include "UnityEngine_UnityEngine_RuntimePlatform1869584967.h"
 #include "UnityEngine_UnityEngine_LogType1559732862.h"
 #include "UnityEngine_UnityEngine_Application_LogCallback1867914413.h"
-#include "mscorlib_System_IntPtr2504060609.h"
-#include "mscorlib_System_AsyncCallback163412349.h"
 #include "UnityEngine_UnityEngine_AssemblyIsEditorAssembly1557026495.h"
 #include "UnityEngine_UnityEngine_AssetBundle2054978754.h"
 #include "UnityEngine_UnityEngine_AssetBundleCreateRequest1038783543.h"
@@ -73,7 +77,6 @@
 #include "UnityEngine_UnityEngine_Behaviour955675639.h"
 #include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "UnityEngine_UnityEngine_Bounds3033363703.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "UnityEngine_UnityEngine_Rect3681755626.h"
 #include "UnityEngine_UnityEngine_RenderTexture2666733923.h"
@@ -190,7 +193,6 @@
 #include "mscorlib_System_IndexOutOfRangeException3527622107.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Fram1120735295.h"
 #include "UnityEngine_UnityEngine_Experimental_Director_Frame658788566.h"
-#include "UnityEngine_UnityEngine_Experimental_Director_Play3250302433.h"
 
 // AOT.MonoPInvokeCallbackAttribute
 struct MonoPInvokeCallbackAttribute_t2934651840;
@@ -202,12 +204,20 @@ struct Attribute_t542643598;
 struct AddComponentMenu_t1099699699;
 // System.String
 struct String_t;
+// UnityEngine.AI.NavMesh/OnNavMeshPreUpdate
+struct OnNavMeshPreUpdate_t2039022291;
+// System.Object
+struct Il2CppObject;
+// System.IAsyncResult
+struct IAsyncResult_t1999651008;
+// System.AsyncCallback
+struct AsyncCallback_t163412349;
+// UnityEngine.AI.NavMeshAgent
+struct NavMeshAgent_t2761625415;
 // UnityEngine.AnimationCurve
 struct AnimationCurve_t3306541151;
 // UnityEngine.Keyframe[]
 struct KeyframeU5BU5D_t449065829;
-// System.Object
-struct Il2CppObject;
 // UnityEngine.Object
 struct Object_t1021602117;
 // UnityEngine.AnimationEvent
@@ -222,10 +232,6 @@ struct AnimatorControllerParameter_t1381019216;
 struct LowMemoryCallback_t642977590;
 // UnityEngine.Application/LogCallback
 struct LogCallback_t1867914413;
-// System.IAsyncResult
-struct IAsyncResult_t1999651008;
-// System.AsyncCallback
-struct AsyncCallback_t163412349;
 // UnityEngine.AssemblyIsEditorAssembly
 struct AssemblyIsEditorAssembly_t1557026495;
 // UnityEngine.AssetBundleCreateRequest
@@ -468,6 +474,8 @@ struct List_1_t3274872481;
 struct AnimatorControllerParameterU5BU5D_t1936965233;
 // System.IndexOutOfRangeException
 struct IndexOutOfRangeException_t3527622107;
+extern Il2CppClass* NavMesh_t1481227028_il2cpp_TypeInfo_var;
+extern const uint32_t NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974_MetadataUsageId;
 struct Object_t1021602117_marshaled_pinvoke;
 struct Object_t1021602117;;
 struct Object_t1021602117_marshaled_pinvoke;;
@@ -692,8 +700,6 @@ extern const uint32_t AnimatorControllerPlayable_GetNextAnimatorClipInfo_m243955
 extern Il2CppClass* IndexOutOfRangeException_t3527622107_il2cpp_TypeInfo_var;
 extern Il2CppCodeGenString* _stringLiteral1460639766;
 extern const uint32_t AnimatorControllerPlayable_GetParameter_m1109094904_MetadataUsageId;
-extern Il2CppClass* PlayableHandle_t1502856514_il2cpp_TypeInfo_var;
-extern const uint32_t PlayableHandle_Equals_m1435096530_MetadataUsageId;
 
 // UnityEngine.Keyframe[]
 struct KeyframeU5BU5D_t449065829  : public Il2CppArray
@@ -1402,6 +1408,10 @@ extern "C"  void Enumerator_Dispose_m3736175406_gshared (Enumerator_t1593300101 
 
 // System.Void System.Attribute::.ctor()
 extern "C"  void Attribute__ctor_m1730479323 (Attribute_t542643598 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
+extern "C"  void OnNavMeshPreUpdate_Invoke_m1433154603 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
+extern "C"  bool NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988 (Il2CppObject * __this /* static, unused */, NavMeshAgent_t2761625415 * ___self0, Vector3_t2243707580 * ___target1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void System.Object::.ctor()
 extern "C"  void Object__ctor_m2551263788 (Il2CppObject * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.AnimationCurve::Init(UnityEngine.Keyframe[])
@@ -2164,24 +2174,6 @@ extern "C"  void AnimatorControllerPlayable_INTERNAL_CALL_ResetTriggerID_m359279
 extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveString_m1715379406 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, String_t* ___name1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)
 extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___handle0, int32_t ___id1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
-extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
-extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
-extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 System.IntPtr::GetHashCode()
-extern "C"  int32_t IntPtr_GetHashCode_m1174575389 (IntPtr_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 System.Int32::GetHashCode()
-extern "C"  int32_t Int32_GetHashCode_m1381647448 (int32_t* __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// System.Boolean System.IntPtr::op_Equality(System.IntPtr,System.IntPtr)
-extern "C"  bool IntPtr_op_Equality_m1573482188 (Il2CppObject * __this /* static, unused */, IntPtr_t p0, IntPtr_t p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -2217,6 +2209,114 @@ extern "C"  void AddComponentMenu__ctor_m648737891 (AddComponentMenu_t1099699699
 		__this->set_m_Ordering_1(L_1);
 		return;
 	}
+}
+// System.Void UnityEngine.AI.NavMesh::Internal_CallOnNavMeshPreUpdate()
+extern "C"  void NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (NavMesh_Internal_CallOnNavMeshPreUpdate_m113598974_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		OnNavMeshPreUpdate_t2039022291 * L_0 = ((NavMesh_t1481227028_StaticFields*)NavMesh_t1481227028_il2cpp_TypeInfo_var->static_fields)->get_onPreUpdate_0();
+		if (!L_0)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		OnNavMeshPreUpdate_t2039022291 * L_1 = ((NavMesh_t1481227028_StaticFields*)NavMesh_t1481227028_il2cpp_TypeInfo_var->static_fields)->get_onPreUpdate_0();
+		NullCheck(L_1);
+		OnNavMeshPreUpdate_Invoke_m1433154603(L_1, /*hidden argument*/NULL);
+	}
+
+IL_0015:
+	{
+		return;
+	}
+}
+extern "C"  void DelegatePInvokeWrapper_OnNavMeshPreUpdate_t2039022291 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method)
+{
+	typedef void (STDCALL *PInvokeFunc)();
+	PInvokeFunc il2cppPInvokeFunc = reinterpret_cast<PInvokeFunc>(((Il2CppDelegate*)__this)->method->methodPointer);
+
+	// Native function invocation
+	il2cppPInvokeFunc();
+
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::.ctor(System.Object,System.IntPtr)
+extern "C"  void OnNavMeshPreUpdate__ctor_m1184347935 (OnNavMeshPreUpdate_t2039022291 * __this, Il2CppObject * ___object0, IntPtr_t ___method1, const MethodInfo* method)
+{
+	__this->set_method_ptr_0((Il2CppMethodPointer)((MethodInfo*)___method1.get_m_value_0())->methodPointer);
+	__this->set_method_3(___method1);
+	__this->set_m_target_2(___object0);
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::Invoke()
+extern "C"  void OnNavMeshPreUpdate_Invoke_m1433154603 (OnNavMeshPreUpdate_t2039022291 * __this, const MethodInfo* method)
+{
+	if(__this->get_prev_9() != NULL)
+	{
+		OnNavMeshPreUpdate_Invoke_m1433154603((OnNavMeshPreUpdate_t2039022291 *)__this->get_prev_9(), method);
+	}
+	il2cpp_codegen_raise_execution_engine_exception_if_method_is_not_found((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	bool ___methodIsStatic = MethodIsStatic((MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	if ((__this->get_m_target_2() != NULL || MethodHasParameters((MethodInfo*)(__this->get_method_3().get_m_value_0()))) && ___methodIsStatic)
+	{
+		typedef void (*FunctionPointerType) (Il2CppObject *, void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(NULL,__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+	else
+	{
+		typedef void (*FunctionPointerType) (void* __this, const MethodInfo* method);
+		((FunctionPointerType)__this->get_method_ptr_0())(__this->get_m_target_2(),(MethodInfo*)(__this->get_method_3().get_m_value_0()));
+	}
+}
+// System.IAsyncResult UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::BeginInvoke(System.AsyncCallback,System.Object)
+extern "C"  Il2CppObject * OnNavMeshPreUpdate_BeginInvoke_m3346880328 (OnNavMeshPreUpdate_t2039022291 * __this, AsyncCallback_t163412349 * ___callback0, Il2CppObject * ___object1, const MethodInfo* method)
+{
+	void *__d_args[1] = {0};
+	return (Il2CppObject *)il2cpp_codegen_delegate_begin_invoke((Il2CppDelegate*)__this, __d_args, (Il2CppDelegate*)___callback0, (Il2CppObject*)___object1);
+}
+// System.Void UnityEngine.AI.NavMesh/OnNavMeshPreUpdate::EndInvoke(System.IAsyncResult)
+extern "C"  void OnNavMeshPreUpdate_EndInvoke_m3901151097 (OnNavMeshPreUpdate_t2039022291 * __this, Il2CppObject * ___result0, const MethodInfo* method)
+{
+	il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
+}
+// System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination(UnityEngine.Vector3)
+extern "C"  bool NavMeshAgent_SetDestination_m1354616139 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580  ___target0, const MethodInfo* method)
+{
+	bool V_0 = false;
+	{
+		bool L_0 = NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988(NULL /*static, unused*/, __this, (&___target0), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000f;
+	}
+
+IL_000f:
+	{
+		bool L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
+extern "C"  bool NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988 (Il2CppObject * __this /* static, unused */, NavMeshAgent_t2761625415 * ___self0, Vector3_t2243707580 * ___target1, const MethodInfo* method)
+{
+	typedef bool (*NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn) (NavMeshAgent_t2761625415 *, Vector3_t2243707580 *);
+	static NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_INTERNAL_CALL_SetDestination_m1977143988_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)");
+	return _il2cpp_icall_func(___self0, ___target1);
+}
+// System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
+extern "C"  float NavMeshAgent_get_remainingDistance_m2699477664 (NavMeshAgent_t2761625415 * __this, const MethodInfo* method)
+{
+	typedef float (*NavMeshAgent_get_remainingDistance_m2699477664_ftn) (NavMeshAgent_t2761625415 *);
+	static NavMeshAgent_get_remainingDistance_m2699477664_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (NavMeshAgent_get_remainingDistance_m2699477664_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.AI.NavMeshAgent::get_remainingDistance()");
+	return _il2cpp_icall_func(__this);
 }
 // Conversion methods for marshalling of: UnityEngine.AnimationCurve
 extern "C" void AnimationCurve_t3306541151_marshal_pinvoke(const AnimationCurve_t3306541151& unmarshaled, AnimationCurve_t3306541151_marshaled_pinvoke& marshaled)
@@ -15092,200 +15192,6 @@ extern "C"  bool AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledB
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (AnimatorControllerPlayable_INTERNAL_CALL_IsParameterControlledByCurveID_m3975433561_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.AnimatorControllerPlayable::INTERNAL_CALL_IsParameterControlledByCurveID(UnityEngine.Experimental.Director.PlayableHandle&,System.Int32)");
 	return _il2cpp_icall_func(___handle0, ___id1);
-}
-// System.Void UnityEngine.Experimental.Director.Playable::.ctor()
-extern "C"  void Playable__ctor_m334077411 (Playable_t3667545548 * __this, const MethodInfo* method)
-{
-	{
-		Object__ctor_m2551263788(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Experimental.Director.PlayableHandle UnityEngine.Experimental.Director.Playable::op_Implicit(UnityEngine.Experimental.Director.Playable)
-extern "C"  PlayableHandle_t1502856514  Playable_op_Implicit_m1650048605 (Il2CppObject * __this /* static, unused */, Playable_t3667545548 * ___b0, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Playable_t3667545548 * L_0 = ___b0;
-		NullCheck(L_0);
-		PlayableHandle_t1502856514  L_1 = L_0->get_handle_0();
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		PlayableHandle_t1502856514  L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.Playable::IsValid()
-extern "C"  bool Playable_IsValid_m2102916683 (Playable_t3667545548 * __this, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = __this->get_address_of_handle_0();
-		bool L_1 = PlayableHandle_IsValid_m40842953(L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_0012;
-	}
-
-IL_0012:
-	{
-		bool L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValid()
-extern "C"  bool PlayableHandle_IsValid_m40842953 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		bool L_0 = PlayableHandle_IsValidInternal_m1910030079(NULL /*static, unused*/, __this, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		bool L_1 = V_0;
-		return L_1;
-	}
-}
-extern "C"  bool PlayableHandle_IsValid_m40842953_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_IsValid_m40842953(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_IsValidInternal_m1910030079 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1502856514 * L_0 = ___playable0;
-		bool L_1 = PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_000d;
-	}
-
-IL_000d:
-	{
-		bool L_2 = V_0;
-		return L_2;
-	}
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)
-extern "C"  bool PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514 * ___playable0, const MethodInfo* method)
-{
-	typedef bool (*PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn) (PlayableHandle_t1502856514 *);
-	static PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableHandle_INTERNAL_CALL_IsValidInternal_m2792360706_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Experimental.Director.PlayableHandle::INTERNAL_CALL_IsValidInternal(UnityEngine.Experimental.Director.PlayableHandle&)");
-	return _il2cpp_icall_func(___playable0);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::Equals(System.Object)
-extern "C"  bool PlayableHandle_Equals_m1435096530 (PlayableHandle_t1502856514 * __this, Il2CppObject * ___p0, const MethodInfo* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (PlayableHandle_Equals_m1435096530_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	{
-		Il2CppObject * L_0 = ___p0;
-		if (((Il2CppObject *)IsInstSealed(L_0, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		V_0 = (bool)0;
-		goto IL_002a;
-	}
-
-IL_0013:
-	{
-		Il2CppObject * L_1 = ___p0;
-		bool L_2 = PlayableHandle_CompareVersion_m2333515486(NULL /*static, unused*/, (*(PlayableHandle_t1502856514 *)__this), ((*(PlayableHandle_t1502856514 *)((PlayableHandle_t1502856514 *)UnBox(L_1, PlayableHandle_t1502856514_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_002a;
-	}
-
-IL_002a:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  bool PlayableHandle_Equals_m1435096530_AdjustorThunk (Il2CppObject * __this, Il2CppObject * ___p0, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_Equals_m1435096530(_thisAdjusted, ___p0, method);
-}
-// System.Int32 UnityEngine.Experimental.Director.PlayableHandle::GetHashCode()
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282 (PlayableHandle_t1502856514 * __this, const MethodInfo* method)
-{
-	int32_t V_0 = 0;
-	{
-		IntPtr_t* L_0 = __this->get_address_of_m_Handle_0();
-		int32_t L_1 = IntPtr_GetHashCode_m1174575389(L_0, /*hidden argument*/NULL);
-		int32_t* L_2 = __this->get_address_of_m_Version_1();
-		int32_t L_3 = Int32_GetHashCode_m1381647448(L_2, /*hidden argument*/NULL);
-		V_0 = ((int32_t)((int32_t)L_1^(int32_t)L_3));
-		goto IL_002a;
-	}
-
-IL_002a:
-	{
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
-extern "C"  int32_t PlayableHandle_GetHashCode_m1257452282_AdjustorThunk (Il2CppObject * __this, const MethodInfo* method)
-{
-	PlayableHandle_t1502856514 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1502856514 *>(__this + 1);
-	return PlayableHandle_GetHashCode_m1257452282(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Experimental.Director.PlayableHandle::CompareVersion(UnityEngine.Experimental.Director.PlayableHandle,UnityEngine.Experimental.Director.PlayableHandle)
-extern "C"  bool PlayableHandle_CompareVersion_m2333515486 (Il2CppObject * __this /* static, unused */, PlayableHandle_t1502856514  ___lhs0, PlayableHandle_t1502856514  ___rhs1, const MethodInfo* method)
-{
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
-	{
-		IntPtr_t L_0 = (&___lhs0)->get_m_Handle_0();
-		IntPtr_t L_1 = (&___rhs1)->get_m_Handle_0();
-		bool L_2 = IntPtr_op_Equality_m1573482188(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		int32_t L_3 = (&___lhs0)->get_m_Version_1();
-		int32_t L_4 = (&___rhs1)->get_m_Version_1();
-		G_B3_0 = ((((int32_t)L_3) == ((int32_t)L_4))? 1 : 0);
-		goto IL_002c;
-	}
-
-IL_002b:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_002c:
-	{
-		V_0 = (bool)G_B3_0;
-		goto IL_0032;
-	}
-
-IL_0032:
-	{
-		bool L_5 = V_0;
-		return L_5;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

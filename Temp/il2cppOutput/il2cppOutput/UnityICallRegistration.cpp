@@ -1,5 +1,17 @@
 void RegisterAllStrippedInternalCalls()
 {
+	//Start Registrations for type : UnityEngine.AI.NavMeshAgent
+
+		//System.Boolean UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination(UnityEngine.AI.NavMeshAgent,UnityEngine.Vector3&)
+		void Register_UnityEngine_AI_NavMeshAgent_INTERNAL_CALL_SetDestination();
+		Register_UnityEngine_AI_NavMeshAgent_INTERNAL_CALL_SetDestination();
+
+		//System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
+		void Register_UnityEngine_AI_NavMeshAgent_get_remainingDistance();
+		Register_UnityEngine_AI_NavMeshAgent_get_remainingDistance();
+
+	//End Registrations for type : UnityEngine.AI.NavMeshAgent
+
 	//Start Registrations for type : UnityEngine.AnimationCurve
 
 		//System.Void UnityEngine.AnimationCurve::Cleanup()

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - bullet
   - musicbox
+  - Destructible
+  - floor
   layers:
   - Default
   - TransparentFX

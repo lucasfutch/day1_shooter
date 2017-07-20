@@ -17,30 +17,37 @@
 #include "codegen/il2cpp-codegen.h"
 #include "mscorlib_System_Array3829468939.h"
 #include "AssemblyU2DCSharp_U3CModuleU3E3783534214.h"
-#include "AssemblyU2DCSharp_ColorChangedEvent2990895397.h"
+#include "AssemblyU2DCSharp_AgentScript536016518.h"
 #include "mscorlib_System_Void1841601450.h"
+#include "UnityEngine_UnityEngine_RaycastHit87180320.h"
+#include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
+#include "UnityEngine_UnityEngine_AI_NavMeshAgent2761625415.h"
+#include "UnityEngine_UnityEngine_Component3819376471.h"
+#include "UnityEngine_UnityEngine_Animator69676727.h"
+#include "UnityEngine_UnityEngine_Vector32243707580.h"
+#include "UnityEngine_UnityEngine_Ray2469606224.h"
+#include "mscorlib_System_String2029220233.h"
+#include "mscorlib_System_Boolean3825574718.h"
+#include "mscorlib_System_Int322071877448.h"
+#include "UnityEngine_UnityEngine_Camera189460977.h"
+#include "mscorlib_System_Single2076509932.h"
+#include "AssemblyU2DCSharp_ColorChangedEvent2990895397.h"
 #include "UnityEngine_UnityEngine_Events_UnityEvent_1_gen2058742090.h"
 #include "AssemblyU2DCSharp_ColorImage3157136356.h"
-#include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
 #include "mscorlib_System_Object2689449295.h"
 #include "mscorlib_System_IntPtr2504060609.h"
 #include "UnityEngine_UI_UnityEngine_UI_Image2042527209.h"
-#include "UnityEngine_UnityEngine_Component3819376471.h"
 #include "AssemblyU2DCSharp_ColorPicker3035206225.h"
 #include "UnityEngine_UnityEngine_Color2020392075.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction_1_gen3386977826.h"
 #include "UnityEngine_UI_UnityEngine_UI_Graphic2426225576.h"
 #include "AssemblyU2DCSharp_ColorLabel1884607337.h"
-#include "mscorlib_System_String2029220233.h"
-#include "mscorlib_System_Single2076509932.h"
 #include "UnityEngine_UI_UnityEngine_UI_Text356221433.h"
 #include "UnityEngine_UnityEngine_Object1021602117.h"
-#include "mscorlib_System_Boolean3825574718.h"
 #include "AssemblyU2DCSharp_HSVChangedEvent1170297569.h"
 #include "UnityEngine_UnityEngine_Events_UnityAction_3_gen235051313.h"
 #include "UnityEngine_UnityEngine_Events_UnityEvent_3_gen4197061729.h"
 #include "AssemblyU2DCSharp_ColorValues3063098635.h"
-#include "mscorlib_System_Int322071877448.h"
 #include "AssemblyU2DCSharp_HsvColor1057062332.h"
 #include "mscorlib_System_Double4078015681.h"
 #include "mscorlib_System_NotImplementedException2785117854.h"
@@ -80,9 +87,7 @@
 #include "AssemblyU2DCSharp_musicControl2891809704.h"
 #include "UnityEngine_UnityEngine_Touch407273883.h"
 #include "UnityEngine_UnityEngine_Vector22243707579.h"
-#include "UnityEngine_UnityEngine_Vector32243707580.h"
 #include "UnityEngine_UnityEngine_RaycastHit2D4063908774.h"
-#include "UnityEngine_UnityEngine_Camera189460977.h"
 #include "UnityEngine_UnityEngine_Collider2D646061738.h"
 #include "UnityEngine_UnityEngine_AudioSource1135106623.h"
 #include "AssemblyU2DCSharp_ParticlePainter1073897267.h"
@@ -99,8 +104,6 @@
 #include "AssemblyU2DCSharp_playMusic1960384527.h"
 #include "AssemblyU2DCSharp_selectBox2744202403.h"
 #include "UnityEngine_UnityEngine_TouchPhase2458120420.h"
-#include "UnityEngine_UnityEngine_Ray2469606224.h"
-#include "UnityEngine_UnityEngine_RaycastHit87180320.h"
 #include "UnityEngine_UnityEngine_Collider3497673348.h"
 #include "AssemblyU2DCSharp_Shooting3467275689.h"
 #include "UnityEngine_UI_UnityEngine_UI_Toggle3976754468.h"
@@ -125,20 +128,30 @@
 #include "UnityEngine_UnityEngine_Light494725636.h"
 #include "AssemblyU2DCSharpU2Dfirstpass_UnityEngine_XR_iOS_U1130867170.h"
 
+// AgentScript
+struct AgentScript_t536016518;
+// UnityEngine.MonoBehaviour
+struct MonoBehaviour_t1158329972;
+// UnityEngine.Component
+struct Component_t3819376471;
+// UnityEngine.AI.NavMeshAgent
+struct NavMeshAgent_t2761625415;
+// System.Object
+struct Il2CppObject;
+// UnityEngine.Animator
+struct Animator_t69676727;
+// UnityEngine.Camera
+struct Camera_t189460977;
+// System.String
+struct String_t;
 // ColorChangedEvent
 struct ColorChangedEvent_t2990895397;
 // UnityEngine.Events.UnityEvent`1<UnityEngine.Color>
 struct UnityEvent_1_t2058742090;
 // ColorImage
 struct ColorImage_t3157136356;
-// UnityEngine.MonoBehaviour
-struct MonoBehaviour_t1158329972;
-// UnityEngine.Component
-struct Component_t3819376471;
 // UnityEngine.UI.Image
 struct Image_t2042527209;
-// System.Object
-struct Il2CppObject;
 // UnityEngine.Events.UnityAction`1<UnityEngine.Color>
 struct UnityAction_1_t3386977826;
 // ColorLabel
@@ -151,8 +164,6 @@ struct Object_t1021602117;
 struct UnityAction_3_t235051313;
 // UnityEngine.Events.UnityEvent`3<System.Single,System.Single,System.Single>
 struct UnityEvent_3_t4197061729;
-// System.String
-struct String_t;
 // ColorPicker
 struct ColorPicker_t3035206225;
 // HSVChangedEvent
@@ -221,8 +232,6 @@ struct ObjectU5BU5D_t3614634134;
 struct StringU5BU5D_t1642385972;
 // musicControl
 struct musicControl_t2891809704;
-// UnityEngine.Camera
-struct Camera_t189460977;
 // UnityEngine.Collider2D
 struct Collider2D_t646061738;
 // UnityEngine.AudioSource
@@ -277,6 +286,15 @@ struct UnityARAmbient_t680084560;
 struct Light_t494725636;
 // UnityEngine.XR.iOS.UnityARSessionNativeInterface
 struct UnityARSessionNativeInterface_t1130867170;
+extern Il2CppClass* RaycastHit_t87180320_il2cpp_TypeInfo_var;
+extern const uint32_t AgentScript__ctor_m2829665649_MetadataUsageId;
+extern const MethodInfo* Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219_MethodInfo_var;
+extern const MethodInfo* Component_GetComponent_TisAnimator_t69676727_m475627522_MethodInfo_var;
+extern const uint32_t AgentScript_Start_m3621949025_MetadataUsageId;
+extern Il2CppClass* Input_t1785128008_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral1492391884;
+extern Il2CppCodeGenString* _stringLiteral551762609;
+extern const uint32_t AgentScript_Update_m198097924_MetadataUsageId;
 extern const MethodInfo* UnityEvent_1__ctor_m117795578_MethodInfo_var;
 extern const uint32_t ColorChangedEvent__ctor_m3710136698_MetadataUsageId;
 extern Il2CppClass* UnityAction_1_t3386977826_il2cpp_TypeInfo_var;
@@ -380,7 +398,6 @@ extern Il2CppCodeGenString* _stringLiteral372029393;
 extern const uint32_t HsvColor_ToString_m1590809902_MetadataUsageId;
 extern Il2CppClass* HsvColor_t1057062332_il2cpp_TypeInfo_var;
 extern const uint32_t HSVUtil_ConvertRgbToHsv_m2238362913_MetadataUsageId;
-extern Il2CppClass* Input_t1785128008_il2cpp_TypeInfo_var;
 extern Il2CppClass* Physics2D_t2540166467_il2cpp_TypeInfo_var;
 extern const MethodInfo* GameObject_GetComponent_TisAudioSource_t1135106623_m1072053017_MethodInfo_var;
 extern const uint32_t musicControl_Update_m223845942_MetadataUsageId;
@@ -656,10 +673,10 @@ public:
 };
 
 
-// System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::.ctor()
-extern "C"  void UnityEvent_1__ctor_m117795578_gshared (UnityEvent_1_t2058742090 * __this, const MethodInfo* method);
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
 extern "C"  Il2CppObject * Component_GetComponent_TisIl2CppObject_m4109961936_gshared (Component_t3819376471 * __this, const MethodInfo* method);
+// System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::.ctor()
+extern "C"  void UnityEvent_1__ctor_m117795578_gshared (UnityEvent_1_t2058742090 * __this, const MethodInfo* method);
 // System.Void UnityEngine.Events.UnityAction`1<UnityEngine.Color>::.ctor(System.Object,System.IntPtr)
 extern "C"  void UnityAction_1__ctor_m3329809356_gshared (UnityAction_1_t3386977826 * __this, Il2CppObject * p0, IntPtr_t p1, const MethodInfo* method);
 // System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::AddListener(UnityEngine.Events.UnityAction`1<!0>)
@@ -731,10 +748,36 @@ extern "C"  void UnityEvent_2_Invoke_m4237217379_gshared (UnityEvent_2_t20166571
 // System.Void UnityEngine.Events.UnityEvent`2<System.Single,System.Single>::.ctor()
 extern "C"  void UnityEvent_2__ctor_m731674732_gshared (UnityEvent_2_t2016657100 * __this, const MethodInfo* method);
 
-// System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::.ctor()
-#define UnityEvent_1__ctor_m117795578(__this, method) ((  void (*) (UnityEvent_1_t2058742090 *, const MethodInfo*))UnityEvent_1__ctor_m117795578_gshared)(__this, method)
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 extern "C"  void MonoBehaviour__ctor_m2464341955 (MonoBehaviour_t1158329972 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.AI.NavMeshAgent>()
+#define Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219(__this, method) ((  NavMeshAgent_t2761625415 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+// !!0 UnityEngine.Component::GetComponent<UnityEngine.Animator>()
+#define Component_GetComponent_TisAnimator_t69676727_m475627522(__this, method) ((  Animator_t69676727 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
+// System.Boolean UnityEngine.Input::GetMouseButtonDown(System.Int32)
+extern "C"  bool Input_GetMouseButtonDown_m47917805 (Il2CppObject * __this /* static, unused */, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Camera UnityEngine.Camera::get_main()
+extern "C"  Camera_t189460977 * Camera_get_main_m475173995 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Input::get_mousePosition()
+extern "C"  Vector3_t2243707580  Input_get_mousePosition_m146923508 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3)
+extern "C"  Ray_t2469606224  Camera_ScreenPointToRay_m614889538 (Camera_t189460977 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Ray::get_origin()
+extern "C"  Vector3_t2243707580  Ray_get_origin_m3339262500 (Ray_t2469606224 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.Ray::get_direction()
+extern "C"  Vector3_t2243707580  Ray_get_direction_m4059191533 (Ray_t2469606224 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&)
+extern "C"  bool Physics_Raycast_m4027183840 (Il2CppObject * __this /* static, unused */, Vector3_t2243707580  p0, Vector3_t2243707580  p1, RaycastHit_t87180320 * p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
+extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Boolean UnityEngine.AI.NavMeshAgent::SetDestination(UnityEngine.Vector3)
+extern "C"  bool NavMeshAgent_SetDestination_m1354616139 (NavMeshAgent_t2761625415 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Single UnityEngine.AI.NavMeshAgent::get_remainingDistance()
+extern "C"  float NavMeshAgent_get_remainingDistance_m2699477664 (NavMeshAgent_t2761625415 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Animator::SetTrigger(System.String)
+extern "C"  void Animator_SetTrigger_m3418492570 (Animator_t69676727 * __this, String_t* p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Events.UnityEvent`1<UnityEngine.Color>::.ctor()
+#define UnityEvent_1__ctor_m117795578(__this, method) ((  void (*) (UnityEvent_1_t2058742090 *, const MethodInfo*))UnityEvent_1__ctor_m117795578_gshared)(__this, method)
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.UI.Image>()
 #define Component_GetComponent_TisImage_t2042527209_m2189462422(__this, method) ((  Image_t2042527209 * (*) (Component_t3819376471 *, const MethodInfo*))Component_GetComponent_TisIl2CppObject_m4109961936_gshared)(__this, method)
 // System.Void UnityEngine.Events.UnityAction`1<UnityEngine.Color>::.ctor(System.Object,System.IntPtr)
@@ -967,8 +1010,6 @@ extern "C"  HsvColor_t1057062332  HSVUtil_ConvertRgbToHsv_m2238362913 (Il2CppObj
 extern "C"  double Math_Min_m2551484304 (Il2CppObject * __this /* static, unused */, double p0, double p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Double System.Math::Max(System.Double,System.Double)
 extern "C"  double Math_Max_m3248989870 (Il2CppObject * __this /* static, unused */, double p0, double p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Camera UnityEngine.Camera::get_main()
-extern "C"  Camera_t189460977 * Camera_get_main_m475173995 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Touch UnityEngine.Input::GetTouch(System.Int32)
 extern "C"  Touch_t407273883  Input_GetTouch_m1463942798 (Il2CppObject * __this /* static, unused */, int32_t p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector2 UnityEngine.Touch::get_position()
@@ -1059,8 +1100,6 @@ extern "C"  void AudioSource_Stop_m3452679614 (AudioSource_t1135106623 * __this,
 extern "C"  int32_t Input_get_touchCount_m2050827666 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.TouchPhase UnityEngine.Touch::get_phase()
 extern "C"  int32_t Touch_get_phase_m196706494 (Touch_t407273883 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Ray UnityEngine.Camera::ScreenPointToRay(UnityEngine.Vector3)
-extern "C"  Ray_t2469606224  Camera_ScreenPointToRay_m614889538 (Camera_t189460977 * __this, Vector3_t2243707580  p0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Ray,UnityEngine.RaycastHit&)
 extern "C"  bool Physics_Raycast_m2736931691 (Il2CppObject * __this /* static, unused */, Ray_t2469606224  p0, RaycastHit_t87180320 * p1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Collider UnityEngine.RaycastHit::get_collider()
@@ -1083,8 +1122,6 @@ extern "C"  Ray_t2469606224  Camera_ViewportPointToRay_m1799506792 (Camera_t1894
 extern "C"  bool Physics_Raycast_m2308457076 (Il2CppObject * __this /* static, unused */, Ray_t2469606224  p0, RaycastHit_t87180320 * p1, float p2, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.String UnityEngine.Object::get_name()
 extern "C"  String_t* Object_get_name_m2079638459 (Object_t1021602117 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.RaycastHit::get_point()
-extern "C"  Vector3_t2243707580  RaycastHit_get_point_m326143462 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Vector3 UnityEngine.RaycastHit::get_normal()
 extern "C"  Vector3_t2243707580  RaycastHit_get_normal_m817665579 (RaycastHit_t87180320 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Quaternion UnityEngine.Quaternion::Euler(UnityEngine.Vector3)
@@ -1127,8 +1164,6 @@ extern "C"  void Vector2__ctor_m3067419446 (Vector2_t2243707579 * __this, float 
 extern "C"  Vector2_t2243707579  Vector2_get_zero_m3966848876 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Quaternion UnityEngine.Transform::get_localRotation()
 extern "C"  Quaternion_t4030073918  Transform_get_localRotation_m4001487205 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
-// UnityEngine.Vector3 UnityEngine.Input::get_mousePosition()
-extern "C"  Vector3_t2243707580  Input_get_mousePosition_m146923508 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Int32 UnityEngine.Screen::get_height()
 extern "C"  int32_t Screen_get_height_m1051800773 (Il2CppObject * __this /* static, unused */, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
@@ -1256,6 +1291,131 @@ extern "C"  void Light_set_intensity_m1790590300 (Light_t494725636 * __this, flo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void AgentScript::.ctor()
+extern "C"  void AgentScript__ctor_m2829665649 (AgentScript_t536016518 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AgentScript__ctor_m2829665649_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	RaycastHit_t87180320  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Initobj (RaycastHit_t87180320_il2cpp_TypeInfo_var, (&V_0));
+		RaycastHit_t87180320  L_0 = V_0;
+		__this->set_hitInfo_5(L_0);
+		MonoBehaviour__ctor_m2464341955(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void AgentScript::Start()
+extern "C"  void AgentScript_Start_m3621949025 (AgentScript_t536016518 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AgentScript_Start_m3621949025_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NavMeshAgent_t2761625415 * L_0 = Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219(__this, /*hidden argument*/Component_GetComponent_TisNavMeshAgent_t2761625415_m754018219_MethodInfo_var);
+		__this->set_agent_3(L_0);
+		Animator_t69676727 * L_1 = Component_GetComponent_TisAnimator_t69676727_m475627522(__this, /*hidden argument*/Component_GetComponent_TisAnimator_t69676727_m475627522_MethodInfo_var);
+		__this->set_animator_2(L_1);
+		return;
+	}
+}
+// System.Void AgentScript::Update()
+extern "C"  void AgentScript_Update_m198097924 (AgentScript_t536016518 * __this, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (AgentScript_Update_m198097924_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Ray_t2469606224  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		bool L_0 = Input_GetMouseButtonDown_m47917805(NULL /*static, unused*/, 0, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		Camera_t189460977 * L_1 = Camera_get_main_m475173995(NULL /*static, unused*/, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1785128008_il2cpp_TypeInfo_var);
+		Vector3_t2243707580  L_2 = Input_get_mousePosition_m146923508(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_1);
+		Ray_t2469606224  L_3 = Camera_ScreenPointToRay_m614889538(L_1, L_2, /*hidden argument*/NULL);
+		V_0 = L_3;
+		Vector3_t2243707580  L_4 = Ray_get_origin_m3339262500((&V_0), /*hidden argument*/NULL);
+		Vector3_t2243707580  L_5 = Ray_get_direction_m4059191533((&V_0), /*hidden argument*/NULL);
+		RaycastHit_t87180320 * L_6 = __this->get_address_of_hitInfo_5();
+		bool L_7 = Physics_Raycast_m4027183840(NULL /*static, unused*/, L_4, L_5, L_6, /*hidden argument*/NULL);
+		if (!L_7)
+		{
+			goto IL_0057;
+		}
+	}
+	{
+		NavMeshAgent_t2761625415 * L_8 = __this->get_agent_3();
+		RaycastHit_t87180320 * L_9 = __this->get_address_of_hitInfo_5();
+		Vector3_t2243707580  L_10 = RaycastHit_get_point_m326143462(L_9, /*hidden argument*/NULL);
+		NullCheck(L_8);
+		NavMeshAgent_SetDestination_m1354616139(L_8, L_10, /*hidden argument*/NULL);
+		__this->set_aiActive_6((bool)1);
+	}
+
+IL_0057:
+	{
+		NavMeshAgent_t2761625415 * L_11 = __this->get_agent_3();
+		NullCheck(L_11);
+		float L_12 = NavMeshAgent_get_remainingDistance_m2699477664(L_11, /*hidden argument*/NULL);
+		if ((!(((float)L_12) <= ((float)(0.0f)))))
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		bool L_13 = __this->get_aiFinished_7();
+		if (L_13)
+		{
+			goto IL_008e;
+		}
+	}
+	{
+		Animator_t69676727 * L_14 = __this->get_animator_2();
+		NullCheck(L_14);
+		Animator_SetTrigger_m3418492570(L_14, _stringLiteral1492391884, /*hidden argument*/NULL);
+		__this->set_aiFinished_7((bool)1);
+	}
+
+IL_008e:
+	{
+		bool L_15 = __this->get_aiActive_6();
+		if (!L_15)
+		{
+			goto IL_00b7;
+		}
+	}
+	{
+		Animator_t69676727 * L_16 = __this->get_animator_2();
+		NullCheck(L_16);
+		Animator_SetTrigger_m3418492570(L_16, _stringLiteral551762609, /*hidden argument*/NULL);
+		__this->set_aiActive_6((bool)0);
+		__this->set_aiFinished_7((bool)0);
+	}
+
+IL_00b7:
+	{
+		return;
+	}
+}
 // System.Void ColorChangedEvent::.ctor()
 extern "C"  void ColorChangedEvent__ctor_m3710136698 (ColorChangedEvent_t2990895397 * __this, const MethodInfo* method)
 {

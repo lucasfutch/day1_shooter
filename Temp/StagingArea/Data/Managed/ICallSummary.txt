@@ -1,3 +1,5 @@
+UnityEngine.AI.NavMeshAgent::INTERNAL_CALL_SetDestination
+UnityEngine.AI.NavMeshAgent::get_remainingDistance
 UnityEngine.AnimationCurve::Cleanup
 UnityEngine.AnimationCurve::Init
 UnityEngine.Animator::get_hasBoundPlayables
