@@ -20,3 +20,5 @@
 /Users/lucasfutch/Desktop/Internship/day1_shooter/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/lucasfutch/Desktop/Internship/day1_shooter/obj/Debug/Assembly-CSharp.dll
 /Users/lucasfutch/Desktop/Internship/day1_shooter/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/lucasfutch/Desktop/Internship/day1_shooter/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/lucasfutch/Desktop/Internship/day1_shooter/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
