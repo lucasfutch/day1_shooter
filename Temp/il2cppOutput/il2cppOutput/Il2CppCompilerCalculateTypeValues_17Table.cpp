@@ -408,9 +408,9 @@ extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1747 = { sizeof (Unit
 extern const int32_t g_FieldOffsetTable1747[4] = 
 {
 	UnityARHitTestExample2_t121388197::get_offset_of_m_HitTransform_2(),
-	UnityARHitTestExample2_t121388197::get_offset_of_firstTime_3(),
-	UnityARHitTestExample2_t121388197::get_offset_of_agent_4(),
-	UnityARHitTestExample2_t121388197::get_offset_of_raycastHitPrev_5(),
+	UnityARHitTestExample2_t121388197::get_offset_of_zombie_3(),
+	UnityARHitTestExample2_t121388197::get_offset_of_aiActive_4(),
+	UnityARHitTestExample2_t121388197::get_offset_of_aiFinished_5(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize1748 = { sizeof (UnityARKitControl_t1698990409), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable1748[6] = 

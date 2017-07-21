@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class AgentScript : MonoBehaviour {
 
-//	public Transform target;
 	public Animator animator;
 	public NavMeshAgent agent;
 	public float stateTimeElapsed;
@@ -24,17 +23,19 @@ public class AgentScript : MonoBehaviour {
 	}
 	
 	void Update () {
-		// agent.SetDestination (target.position);
-
-		if (Input.GetMouseButtonDown (0)) {
-			
+		//if (Input.GetMouseButtonDown (0)) {
+		if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began)) {	
 			Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 			if (Physics.Raycast (ray.origin, ray.direction, out hitInfo)) {
 				//agent.destination = hitInfo.point;
+				if (hitInfo.collider.CompareTag ("floor")) {
+
+					Debug.Log ("floor touch");
+				}
+					
 				agent.SetDestination (hitInfo.point);
 				aiActive = true;
 			}
-
 		}
 
 		if ((agent.remainingDistance <= 0) && !aiFinished) {
@@ -47,11 +48,5 @@ public class AgentScript : MonoBehaviour {
 			aiActive = false;
 			aiFinished = false;
 		}
-			
-
-//
-//		if ((agent.remainingDistance <= 0) && aiFinished) {
-//			aiFinished = false;
-//		}
 	}
 }

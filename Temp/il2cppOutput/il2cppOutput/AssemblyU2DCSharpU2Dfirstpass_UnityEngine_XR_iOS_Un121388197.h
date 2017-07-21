@@ -11,12 +11,11 @@
 #include <stdint.h>
 
 #include "UnityEngine_UnityEngine_MonoBehaviour1158329972.h"
-#include "UnityEngine_UnityEngine_RaycastHit87180320.h"
 
 // UnityEngine.Transform
 struct Transform_t3275118058;
-// UnityEngine.AI.NavMeshAgent
-struct NavMeshAgent_t2761625415;
+// UnityEngine.GameObject
+struct GameObject_t1756533147;
 
 
 
@@ -33,12 +32,12 @@ struct  UnityARHitTestExample2_t121388197  : public MonoBehaviour_t1158329972
 public:
 	// UnityEngine.Transform UnityEngine.XR.iOS.UnityARHitTestExample2::m_HitTransform
 	Transform_t3275118058 * ___m_HitTransform_2;
-	// System.Boolean UnityEngine.XR.iOS.UnityARHitTestExample2::firstTime
-	bool ___firstTime_3;
-	// UnityEngine.AI.NavMeshAgent UnityEngine.XR.iOS.UnityARHitTestExample2::agent
-	NavMeshAgent_t2761625415 * ___agent_4;
-	// UnityEngine.RaycastHit UnityEngine.XR.iOS.UnityARHitTestExample2::raycastHitPrev
-	RaycastHit_t87180320  ___raycastHitPrev_5;
+	// UnityEngine.GameObject UnityEngine.XR.iOS.UnityARHitTestExample2::zombie
+	GameObject_t1756533147 * ___zombie_3;
+	// System.Boolean UnityEngine.XR.iOS.UnityARHitTestExample2::aiActive
+	bool ___aiActive_4;
+	// System.Boolean UnityEngine.XR.iOS.UnityARHitTestExample2::aiFinished
+	bool ___aiFinished_5;
 
 public:
 	inline static int32_t get_offset_of_m_HitTransform_2() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___m_HitTransform_2)); }
@@ -50,29 +49,29 @@ public:
 		Il2CppCodeGenWriteBarrier(&___m_HitTransform_2, value);
 	}
 
-	inline static int32_t get_offset_of_firstTime_3() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___firstTime_3)); }
-	inline bool get_firstTime_3() const { return ___firstTime_3; }
-	inline bool* get_address_of_firstTime_3() { return &___firstTime_3; }
-	inline void set_firstTime_3(bool value)
+	inline static int32_t get_offset_of_zombie_3() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___zombie_3)); }
+	inline GameObject_t1756533147 * get_zombie_3() const { return ___zombie_3; }
+	inline GameObject_t1756533147 ** get_address_of_zombie_3() { return &___zombie_3; }
+	inline void set_zombie_3(GameObject_t1756533147 * value)
 	{
-		___firstTime_3 = value;
+		___zombie_3 = value;
+		Il2CppCodeGenWriteBarrier(&___zombie_3, value);
 	}
 
-	inline static int32_t get_offset_of_agent_4() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___agent_4)); }
-	inline NavMeshAgent_t2761625415 * get_agent_4() const { return ___agent_4; }
-	inline NavMeshAgent_t2761625415 ** get_address_of_agent_4() { return &___agent_4; }
-	inline void set_agent_4(NavMeshAgent_t2761625415 * value)
+	inline static int32_t get_offset_of_aiActive_4() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___aiActive_4)); }
+	inline bool get_aiActive_4() const { return ___aiActive_4; }
+	inline bool* get_address_of_aiActive_4() { return &___aiActive_4; }
+	inline void set_aiActive_4(bool value)
 	{
-		___agent_4 = value;
-		Il2CppCodeGenWriteBarrier(&___agent_4, value);
+		___aiActive_4 = value;
 	}
 
-	inline static int32_t get_offset_of_raycastHitPrev_5() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___raycastHitPrev_5)); }
-	inline RaycastHit_t87180320  get_raycastHitPrev_5() const { return ___raycastHitPrev_5; }
-	inline RaycastHit_t87180320 * get_address_of_raycastHitPrev_5() { return &___raycastHitPrev_5; }
-	inline void set_raycastHitPrev_5(RaycastHit_t87180320  value)
+	inline static int32_t get_offset_of_aiFinished_5() { return static_cast<int32_t>(offsetof(UnityARHitTestExample2_t121388197, ___aiFinished_5)); }
+	inline bool get_aiFinished_5() const { return ___aiFinished_5; }
+	inline bool* get_address_of_aiFinished_5() { return &___aiFinished_5; }
+	inline void set_aiFinished_5(bool value)
 	{
-		___raycastHitPrev_5 = value;
+		___aiFinished_5 = value;
 	}
 };
 

@@ -1522,12 +1522,12 @@ extern const Il2CppGenericInst GenInst_DontDestroyOnLoad_t3235789354_0_0_0 = { 1
 extern const Il2CppType AudioSource_t1135106623_0_0_0;
 static const Il2CppType* GenInst_AudioSource_t1135106623_0_0_0_Types[] = { &AudioSource_t1135106623_0_0_0 };
 extern const Il2CppGenericInst GenInst_AudioSource_t1135106623_0_0_0 = { 1, GenInst_AudioSource_t1135106623_0_0_0_Types };
-extern const Il2CppType NavMeshAgent_t2761625415_0_0_0;
-static const Il2CppType* GenInst_NavMeshAgent_t2761625415_0_0_0_Types[] = { &NavMeshAgent_t2761625415_0_0_0 };
-extern const Il2CppGenericInst GenInst_NavMeshAgent_t2761625415_0_0_0 = { 1, GenInst_NavMeshAgent_t2761625415_0_0_0_Types };
 extern const Il2CppType MeshFilter_t3026937449_0_0_0;
 static const Il2CppType* GenInst_MeshFilter_t3026937449_0_0_0_Types[] = { &MeshFilter_t3026937449_0_0_0 };
 extern const Il2CppGenericInst GenInst_MeshFilter_t3026937449_0_0_0 = { 1, GenInst_MeshFilter_t3026937449_0_0_0_Types };
+extern const Il2CppType NavMeshAgent_t2761625415_0_0_0;
+static const Il2CppType* GenInst_NavMeshAgent_t2761625415_0_0_0_Types[] = { &NavMeshAgent_t2761625415_0_0_0 };
+extern const Il2CppGenericInst GenInst_NavMeshAgent_t2761625415_0_0_0 = { 1, GenInst_NavMeshAgent_t2761625415_0_0_0_Types };
 extern const Il2CppType Slider_t297367283_0_0_0;
 static const Il2CppType* GenInst_Slider_t297367283_0_0_0_Types[] = { &Slider_t297367283_0_0_0 };
 extern const Il2CppGenericInst GenInst_Slider_t297367283_0_0_0 = { 1, GenInst_Slider_t297367283_0_0_0_Types };
@@ -2118,8 +2118,8 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[554] =
 	&GenInst_UnityARVideo_t2351297253_0_0_0,
 	&GenInst_DontDestroyOnLoad_t3235789354_0_0_0,
 	&GenInst_AudioSource_t1135106623_0_0_0,
-	&GenInst_NavMeshAgent_t2761625415_0_0_0,
 	&GenInst_MeshFilter_t3026937449_0_0_0,
+	&GenInst_NavMeshAgent_t2761625415_0_0_0,
 	&GenInst_Slider_t297367283_0_0_0,
 	&GenInst_RawImage_t2749640213_0_0_0,
 	&GenInst_InputField_t1631627530_0_0_0,
