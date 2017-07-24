@@ -122,10 +122,10 @@ class WindZone;
 namespace UI { class CanvasRenderer; } template <> void RegisterClass<UI::CanvasRenderer>();
 class Collider; template <> void RegisterClass<Collider>();
 class BoxCollider; template <> void RegisterClass<BoxCollider>();
-class CapsuleCollider; 
+class CapsuleCollider; template <> void RegisterClass<CapsuleCollider>();
 class CharacterController; 
 class MeshCollider; template <> void RegisterClass<MeshCollider>();
-class SphereCollider; 
+class SphereCollider; template <> void RegisterClass<SphereCollider>();
 class TerrainCollider; 
 class WheelCollider; 
 namespace Unity { class Joint; } 
@@ -150,8 +150,8 @@ class MeshRenderer; template <> void RegisterClass<MeshRenderer>();
 class ParticleRenderer; 
 class ParticleSystemRenderer; template <> void RegisterClass<ParticleSystemRenderer>();
 class SkinnedMeshRenderer; template <> void RegisterClass<SkinnedMeshRenderer>();
-class SpriteRenderer; 
-class TrailRenderer; 
+class SpriteRenderer; template <> void RegisterClass<SpriteRenderer>();
+class TrailRenderer; template <> void RegisterClass<TrailRenderer>();
 class Rigidbody; template <> void RegisterClass<Rigidbody>();
 class Rigidbody2D; 
 namespace TextRenderingPrivate { class TextMesh; } 
@@ -254,7 +254,7 @@ void RegisterAllClasses()
 {
 void RegisterBuiltinTypes();
 RegisterBuiltinTypes();
-	//Total: 81 non stripped classes
+	//Total: 85 non stripped classes
 	//0. Behaviour
 	RegisterClass<Behaviour>();
 	//1. Unity::Component
@@ -387,35 +387,43 @@ RegisterBuiltinTypes();
 	RegisterClass<UnityConnectSettings>();
 	//65. LevelGameManager
 	RegisterClass<LevelGameManager>();
-	//66. BoxCollider
-	RegisterClass<BoxCollider>();
-	//67. AnimationClip
-	RegisterClass<AnimationClip>();
-	//68. Motion
-	RegisterClass<Motion>();
-	//69. AudioListener
+	//66. AudioListener
 	RegisterClass<AudioListener>();
-	//70. Avatar
-	RegisterClass<Avatar>();
-	//71. AnimatorController
-	RegisterClass<AnimatorController>();
-	//72. RuntimeAnimatorController
-	RegisterClass<RuntimeAnimatorController>();
-	//73. RenderSettings
+	//67. RenderSettings
 	RegisterClass<RenderSettings>();
-	//74. FlareLayer
+	//68. FlareLayer
 	RegisterClass<FlareLayer>();
-	//75. SkinnedMeshRenderer
-	RegisterClass<SkinnedMeshRenderer>();
-	//76. LightmapSettings
+	//69. LightmapSettings
 	RegisterClass<LightmapSettings>();
-	//77. NavMeshSettings
-	RegisterClass<NavMeshSettings>();
-	//78. ParticleSystemRenderer
+	//70. SpriteRenderer
+	RegisterClass<SpriteRenderer>();
+	//71. BoxCollider
+	RegisterClass<BoxCollider>();
+	//72. TrailRenderer
+	RegisterClass<TrailRenderer>();
+	//73. SphereCollider
+	RegisterClass<SphereCollider>();
+	//74. CapsuleCollider
+	RegisterClass<CapsuleCollider>();
+	//75. ParticleSystemRenderer
 	RegisterClass<ParticleSystemRenderer>();
-	//79. NavMeshObstacle
+	//76. AnimationClip
+	RegisterClass<AnimationClip>();
+	//77. Motion
+	RegisterClass<Motion>();
+	//78. Avatar
+	RegisterClass<Avatar>();
+	//79. AnimatorController
+	RegisterClass<AnimatorController>();
+	//80. RuntimeAnimatorController
+	RegisterClass<RuntimeAnimatorController>();
+	//81. SkinnedMeshRenderer
+	RegisterClass<SkinnedMeshRenderer>();
+	//82. NavMeshSettings
+	RegisterClass<NavMeshSettings>();
+	//83. NavMeshObstacle
 	RegisterClass<NavMeshObstacle>();
-	//80. NavMeshData
+	//84. NavMeshData
 	RegisterClass<NavMeshData>();
 
 }

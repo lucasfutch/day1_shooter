@@ -3524,13 +3524,6 @@ IL_00e7:
 		return L_32;
 	}
 }
-// System.Void UnityEngine.XR.iOS.UnityARHitTestExample2::Start()
-extern "C"  void UnityARHitTestExample2_Start_m1874789996 (UnityARHitTestExample2_t121388197 * __this, const MethodInfo* method)
-{
-	{
-		return;
-	}
-}
 // System.Void UnityEngine.XR.iOS.UnityARHitTestExample2::Update()
 extern "C"  void UnityARHitTestExample2_Update_m3461779921 (UnityARHitTestExample2_t121388197 * __this, const MethodInfo* method)
 {

@@ -1,2 +1,15 @@
 <linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="changeMenuScript">
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+			<method name="changeScene"/>
+		</type>
+		<type fullname="Shooting">
+			<method name="Shoot"/>
+		</type>
+	</assembly>
 </linker>

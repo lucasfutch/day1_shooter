@@ -429,6 +429,7 @@ UnityEngine.RenderTexture::Internal_GetWidth
 UnityEngine.Resources::GetBuiltinResource
 UnityEngine.Resources::Load
 UnityEngine.Rigidbody::INTERNAL_CALL_AddForce
+UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal
 UnityEngine.Screen::get_height
 UnityEngine.Screen::get_width
 UnityEngine.Screen::get_dpi
@@ -526,6 +527,7 @@ UnityEngine.Transform::INTERNAL_set_position
 UnityEngine.Transform::INTERNAL_set_rotation
 UnityEngine.Transform::SetAsFirstSibling
 UnityEngine.Transform::SetParent
+UnityEngine.Transform::set_parentInternal
 UnityEngine.Transform::GetChild
 UnityEngine.Transform::get_parentInternal
 UnityEngine.UnhandledExceptionHandler::NativeUnhandledExceptionHandler

@@ -177,6 +177,7 @@
 #include "UnityEngine_UnityEngine_RangeInt2323401134.h"
 #include "UnityEngine_UnityEngine_TrackedReference1045890189.h"
 #include "UnityEngine_UnityEngine_Transform3275118058.h"
+#include "UnityEngine_UnityEngine_RectTransform3349966182.h"
 #include "UnityEngine_UnityEngine_Matrix4x42933234003.h"
 #include "UnityEngine_UnityEngine_Transform_Enumerator1251553160.h"
 #include "UnityEngine_UnityEngine_UICharInfo3056636800.h"
@@ -687,6 +688,9 @@ extern const uint32_t TouchScreenKeyboard_Open_m3410222954_MetadataUsageId;
 extern const uint32_t TrackedReference_op_Equality_m3491334086_MetadataUsageId;
 extern Il2CppClass* TrackedReference_t1045890189_il2cpp_TypeInfo_var;
 extern const uint32_t TrackedReference_Equals_m3153703389_MetadataUsageId;
+extern Il2CppClass* RectTransform_t3349966182_il2cpp_TypeInfo_var;
+extern Il2CppCodeGenString* _stringLiteral2212073539;
+extern const uint32_t Transform_set_parent_m3281327839_MetadataUsageId;
 extern Il2CppClass* Enumerator_t1251553160_il2cpp_TypeInfo_var;
 extern const uint32_t Transform_GetEnumerator_m3479720613_MetadataUsageId;
 extern Il2CppClass* UIVertex_t1204258818_il2cpp_TypeInfo_var;
@@ -1479,6 +1483,8 @@ extern "C"  int32_t Scene_get_handle_m1555912301 (Scene_t1684909666 * __this, co
 extern "C"  int32_t Scene_GetHashCode_m3223653899 (Scene_t1684909666 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Boolean UnityEngine.SceneManagement.Scene::Equals(System.Object)
 extern "C"  bool Scene_Equals_m3588907349 (Scene_t1684909666 * __this, Il2CppObject * ___other0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// UnityEngine.AsyncOperation UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal(System.String,System.Int32,System.Boolean,System.Boolean)
+extern "C"  AsyncOperation_t3814632279 * SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043 (Il2CppObject * __this /* static, unused */, String_t* ___sceneName0, int32_t ___sceneBuildIndex1, bool ___isAdditive2, bool ___mustCompleteNextFrame3, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Events.UnityAction`2<UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode>::Invoke(T0,T1)
 #define UnityAction_2_Invoke_m1528820797(__this, p0, p1, method) ((  void (*) (UnityAction_2_t1903595547 *, Scene_t1684909666 , int32_t, const MethodInfo*))UnityAction_2_Invoke_m1528820797_gshared)(__this, p0, p1, method)
 // System.Void UnityEngine.Events.UnityAction`1<UnityEngine.SceneManagement.Scene>::Invoke(T0)
@@ -1997,6 +2003,10 @@ extern "C"  void Transform_INTERNAL_get_localScale_m2568549910 (Transform_t32751
 extern "C"  void Transform_INTERNAL_set_localScale_m3680777866 (Transform_t3275118058 * __this, Vector3_t2243707580 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // UnityEngine.Transform UnityEngine.Transform::get_parentInternal()
 extern "C"  Transform_t3275118058 * Transform_get_parentInternal_m927919099 (Transform_t3275118058 * __this, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Debug::LogWarning(System.Object,UnityEngine.Object)
+extern "C"  void Debug_LogWarning_m1280021602 (Il2CppObject * __this /* static, unused */, Il2CppObject * ___message0, Object_t1021602117 * ___context1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
+// System.Void UnityEngine.Transform::set_parentInternal(UnityEngine.Transform)
+extern "C"  void Transform_set_parentInternal_m4124721022 (Transform_t3275118058 * __this, Transform_t3275118058 * ___value0, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform,System.Boolean)
 extern "C"  void Transform_SetParent_m1963830867 (Transform_t3275118058 * __this, Transform_t3275118058 * ___parent0, bool ___worldPositionStays1, const MethodInfo* method) IL2CPP_METHOD_ATTR;
 // System.Void UnityEngine.Transform::INTERNAL_get_worldToLocalMatrix(UnityEngine.Matrix4x4&)
@@ -2805,6 +2815,57 @@ extern "C"  bool Scene_Equals_m3588907349_AdjustorThunk (Il2CppObject * __this, 
 {
 	Scene_t1684909666 * _thisAdjusted = reinterpret_cast<Scene_t1684909666 *>(__this + 1);
 	return Scene_Equals_m3588907349(_thisAdjusted, ___other0, method);
+}
+// System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.String,UnityEngine.SceneManagement.LoadSceneMode)
+extern "C"  void SceneManager_LoadScene_m1386820036 (Il2CppObject * __this /* static, unused */, String_t* ___sceneName0, int32_t ___mode1, const MethodInfo* method)
+{
+	int32_t G_B2_0 = 0;
+	String_t* G_B2_1 = NULL;
+	int32_t G_B1_0 = 0;
+	String_t* G_B1_1 = NULL;
+	int32_t G_B3_0 = 0;
+	int32_t G_B3_1 = 0;
+	String_t* G_B3_2 = NULL;
+	{
+		String_t* L_0 = ___sceneName0;
+		int32_t L_1 = ___mode1;
+		G_B1_0 = (-1);
+		G_B1_1 = L_0;
+		if ((!(((uint32_t)L_1) == ((uint32_t)1))))
+		{
+			G_B2_0 = (-1);
+			G_B2_1 = L_0;
+			goto IL_0010;
+		}
+	}
+	{
+		G_B3_0 = 1;
+		G_B3_1 = G_B1_0;
+		G_B3_2 = G_B1_1;
+		goto IL_0011;
+	}
+
+IL_0010:
+	{
+		G_B3_0 = 0;
+		G_B3_1 = G_B2_0;
+		G_B3_2 = G_B2_1;
+	}
+
+IL_0011:
+	{
+		SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043(NULL /*static, unused*/, G_B3_2, G_B3_1, (bool)G_B3_0, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.AsyncOperation UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal(System.String,System.Int32,System.Boolean,System.Boolean)
+extern "C"  AsyncOperation_t3814632279 * SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043 (Il2CppObject * __this /* static, unused */, String_t* ___sceneName0, int32_t ___sceneBuildIndex1, bool ___isAdditive2, bool ___mustCompleteNextFrame3, const MethodInfo* method)
+{
+	typedef AsyncOperation_t3814632279 * (*SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043_ftn) (String_t*, int32_t, bool, bool);
+	static SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SceneManager_LoadSceneAsyncNameIndexInternal_m3279056043_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SceneManagement.SceneManager::LoadSceneAsyncNameIndexInternal(System.String,System.Int32,System.Boolean,System.Boolean)");
+	return _il2cpp_icall_func(___sceneName0, ___sceneBuildIndex1, ___isAdditive2, ___mustCompleteNextFrame3);
 }
 // System.Void UnityEngine.SceneManagement.SceneManager::Internal_SceneLoaded(UnityEngine.SceneManagement.Scene,UnityEngine.SceneManagement.LoadSceneMode)
 extern "C"  void SceneManager_Internal_SceneLoaded_m4005732915 (Il2CppObject * __this /* static, unused */, Scene_t1684909666  ___scene0, int32_t ___mode1, const MethodInfo* method)
@@ -12389,6 +12450,33 @@ IL_000d:
 		return L_1;
 	}
 }
+// System.Void UnityEngine.Transform::set_parent(UnityEngine.Transform)
+extern "C"  void Transform_set_parent_m3281327839 (Transform_t3275118058 * __this, Transform_t3275118058 * ___value0, const MethodInfo* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Transform_set_parent_m3281327839_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		if (!((RectTransform_t3349966182 *)IsInstSealed(__this, RectTransform_t3349966182_il2cpp_TypeInfo_var)))
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Debug_t1368543263_il2cpp_TypeInfo_var);
+		Debug_LogWarning_m1280021602(NULL /*static, unused*/, _stringLiteral2212073539, __this, /*hidden argument*/NULL);
+	}
+
+IL_0017:
+	{
+		Transform_t3275118058 * L_0 = ___value0;
+		Transform_set_parentInternal_m4124721022(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
 // UnityEngine.Transform UnityEngine.Transform::get_parentInternal()
 extern "C"  Transform_t3275118058 * Transform_get_parentInternal_m927919099 (Transform_t3275118058 * __this, const MethodInfo* method)
 {
@@ -12397,6 +12485,15 @@ extern "C"  Transform_t3275118058 * Transform_get_parentInternal_m927919099 (Tra
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Transform_get_parentInternal_m927919099_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::get_parentInternal()");
 	return _il2cpp_icall_func(__this);
+}
+// System.Void UnityEngine.Transform::set_parentInternal(UnityEngine.Transform)
+extern "C"  void Transform_set_parentInternal_m4124721022 (Transform_t3275118058 * __this, Transform_t3275118058 * ___value0, const MethodInfo* method)
+{
+	typedef void (*Transform_set_parentInternal_m4124721022_ftn) (Transform_t3275118058 *, Transform_t3275118058 *);
+	static Transform_set_parentInternal_m4124721022_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Transform_set_parentInternal_m4124721022_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Transform::set_parentInternal(UnityEngine.Transform)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 // System.Void UnityEngine.Transform::SetParent(UnityEngine.Transform)
 extern "C"  void Transform_SetParent_m4124909910 (Transform_t3275118058 * __this, Transform_t3275118058 * ___parent0, const MethodInfo* method)
@@ -13459,6 +13556,25 @@ extern "C"  Vector2_t2243707579  Vector2_get_up_m977201173 (Il2CppObject * __thi
 		Vector2_t2243707579  L_0;
 		memset(&L_0, 0, sizeof(L_0));
 		Vector2__ctor_m3067419446(&L_0, (0.0f), (1.0f), /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_0016;
+	}
+
+IL_0016:
+	{
+		Vector2_t2243707579  L_1 = V_0;
+		return L_1;
+	}
+}
+// UnityEngine.Vector2 UnityEngine.Vector2::get_right()
+extern "C"  Vector2_t2243707579  Vector2_get_right_m28012078 (Il2CppObject * __this /* static, unused */, const MethodInfo* method)
+{
+	Vector2_t2243707579  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Vector2_t2243707579  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Vector2__ctor_m3067419446(&L_0, (1.0f), (0.0f), /*hidden argument*/NULL);
 		V_0 = L_0;
 		goto IL_0016;
 	}

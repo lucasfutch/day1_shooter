@@ -62,6 +62,7 @@
      <Compile Include="Assets\HSVPicker\UI\SVBoxSlider.cs" />
      <Compile Include="Assets\HSVPicker\UtilityScripts\BoxSlider.cs" />
      <Compile Include="Assets\HSVPicker\UtilityScripts\HSVUtil.cs" />
+     <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\Scripts\ParticlePainter.cs" />
      <Compile Include="Assets\Scripts\Shooting.cs" />
      <Compile Include="Assets\Scripts\destructor.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\playMusic.cs" />
      <Compile Include="Assets\Scripts\selectBox.cs" />
      <Compile Include="Assets\UnityARAmbient.cs" />
+     <Compile Include="Assets\changeMenuScript.cs" />
      <None Include="Assets\Textures\DepthMask.shader" />
      <None Include="Assets\Plugins\iOS\UnityARKit\Shaders\MobileOcclusion.shader" />
      <None Include="Assets\SpartanKing\animations.txt" />

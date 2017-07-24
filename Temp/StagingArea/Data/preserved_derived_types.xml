@@ -26,6 +26,7 @@
 <type fullname="HexColorField" preserve="all"/>
 <type fullname="SVBoxSlider" preserve="all"/>
 <type fullname="UnityEngine.UI.BoxSlider" preserve="all"/>
+<type fullname="MenuScript" preserve="all"/>
 <type fullname="ParticlePainter" preserve="all"/>
 <type fullname="Shooting" preserve="all"/>
 <type fullname="destructor" preserve="all"/>
@@ -34,6 +35,7 @@
 <type fullname="playMusic" preserve="all"/>
 <type fullname="selectBox" preserve="all"/>
 <type fullname="UnityEngine.XR.iOS.UnityARAmbient" preserve="all"/>
+<type fullname="changeMenuScript" preserve="all"/>
 </assembly>
 <assembly fullname="UnityEngine.UI">
 <type fullname="UnityEngine.EventSystems.EventSystem" preserve="all"/>
